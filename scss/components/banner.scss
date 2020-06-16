@@ -1,0 +1,41 @@
+.banner {
+  background: url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
+  background-color: $blue;
+  height: 100vh;
+  min-height: 650px;
+  color: #fff;
+  padding: 24px 0 45px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    bottom: -48px;
+    left: 2%;
+    content: url("../img/decor/leaf-left.png");
+  }
+} 
+
+.banner__title-section {
+  width: 46%;
+}
+
+.banner__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.banner__main-title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.banner__title-description {
+  font-size: 21px;
+  margin-bottom: 28px;
+  padding-right: 10%;
+}

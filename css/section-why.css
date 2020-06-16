@@ -1,0 +1,12 @@
+.section-why {
+  position: relative;
+  background: url("../img/decor/grey-leaf-left.png") left top 57% no-repeat;
+}
+
+.section-why:before {
+  content: url("../img/decor/bars-with-raspberry.png");
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+}
+/*# sourceMappingURL=section-why.css.map */

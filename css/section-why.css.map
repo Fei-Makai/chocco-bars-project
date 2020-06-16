@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,sCAAsC,CAAC,IAAI,CAAC,GAAG,CAAC,GAAG,CAAC,SAAS;CAQ1E;;AAVD,AAIE,YAJU,AAIT,OAAO,CAAC;EACP,OAAO,EAAE,2CAA2C;EACpD,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,IAAI,EAAE,CAAC;CACR",
+    "sources": [
+        "../scss/components/section-why.scss"
+    ],
+    "names": [],
+    "file": "section-why.css"
+}

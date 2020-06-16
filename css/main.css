@@ -1,0 +1,386 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -mos-osx-font-smoothing: grayscale;
+  position: relative;
+  color: #666666;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.banner {
+  background: url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
+  background-color: #61c4d9;
+  height: 100vh;
+  min-height: 650px;
+  color: #fff;
+  padding: 24px 0 45px;
+  position: relative;
+}
+
+.banner:before {
+  position: absolute;
+  bottom: -48px;
+  left: 2%;
+  content: url("../img/decor/leaf-left.png");
+}
+
+.banner__title-section {
+  width: 46%;
+}
+
+.banner__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.banner__main-title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.banner__title-description {
+  font-size: 21px;
+  margin-bottom: 28px;
+  padding-right: 10%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 15px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.phone-number {
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon-elem {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+}
+
+.features {
+  display: flex;
+}
+
+.features__item {
+  margin-right: 46px;
+}
+
+.features__item:last-chilg {
+  margin-right: 0;
+}
+
+.feature {
+  display: flex;
+}
+
+.feature__icon {
+  width: 45px;
+  margin-right: 7px;
+}
+
+.feature__text {
+  font-size: 16px;
+  max-width: 85px;
+}
+
+.btn {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 18px 35px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.btn--theme-white {
+  background: #fff;
+  color: #0b4d3c;
+}
+
+.btn--theme-white:hover {
+  background: #0b4d3c;
+  color: #fff;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline__title {
+  margin-bottom: 25px;
+}
+
+.headline__subtitle {
+  padding: 0 26%;
+}
+
+.benefits {
+  display: flex;
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+
+.benefits__item:before {
+  content: url("../img/decor/separator.png");
+  position: absolute;
+  top: 30px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.benefits__item:first-child {
+  padding-left: 0;
+}
+
+.benefits__item:last-child {
+  padding-right: 0;
+}
+
+.benefits__item:last-child:before {
+  display: none;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit__image-wrapper {
+  display: inline-block;
+  width: 126px;
+  height: 126px;
+  position: relative;
+  background-color: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.benefit__icon {
+  width: 75px;
+  height: 69px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-why {
+  position: relative;
+  background: url("../img/decor/grey-leaf-left.png") left top 57% no-repeat;
+}
+
+.section-why:before {
+  content: url("../img/decor/bars-with-raspberry.png");
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+}
+
+.reviews__display {
+  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
+  padding: 50px 45px 34px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews__display:before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -65px;
+}
+
+.reviews__display-inner {
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 254px;
+  height: 260px;
+}
+
+.reviews__avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.reviews__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 22px;
+  color: black;
+}
+
+.reviews__text {
+  margin-bottom: 36px;
+}
+
+.reviews__author {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.reviews__switcher {
+  display: flex;
+}
+
+.interactive-avatar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.interactive-avatar--active {
+  border-color: #0f5a47;
+}
+
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
+.interactive-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*# sourceMappingURL=main.css.map */
