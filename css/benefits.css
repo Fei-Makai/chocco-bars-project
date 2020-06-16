@@ -1,5 +1,6 @@
 .benefits {
   display: flex;
+  margin-bottom: 120px;
 }
 
 .benefits__item {

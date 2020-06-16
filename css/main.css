@@ -76,7 +76,7 @@ img {
 }
 
 .banner {
-  background: url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
+  background: url("../img/decor/banner-leaves-middle-right.png") right 2% bottom 20% no-repeat, url("../img/decor/banner-berries-middle-right.png") right 25% bottom 5% no-repeat, url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
   height: 100vh;
   min-height: 650px;
@@ -90,6 +90,13 @@ img {
   bottom: -48px;
   left: 2%;
   content: url("../img/decor/leaf-left.png");
+}
+
+.banner:after {
+  position: absolute;
+  bottom: -55px;
+  right: 10%;
+  content: url("../img/decor/banner-berries-bottom-right.png");
 }
 
 .banner__title-section {
@@ -187,6 +194,7 @@ img {
   border-radius: 100px;
   line-height: 1;
   text-decoration: none;
+  border: none;
 }
 
 .btn--theme-white {
@@ -199,12 +207,41 @@ img {
   color: #fff;
 }
 
+.btn--theme-green {
+  background: #0b4d3c;
+  color: #fff;
+}
+
+.btn--theme-green:hover {
+  background: #fff;
+  color: #0b4d3c;
+}
+
+.btn--theme-transparent {
+  background: transparent;
+  color: #000;
+  text-transform: none;
+}
+
+.btn--theme-transparent:hover {
+  background: transparent;
+  color: #0b4d3c;
+}
+
 .section {
   height: 100vh;
   min-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.section--font-color--green {
+  color: #0b4d3c;
+}
+
+.section--font-color--green .section__title {
+  color: inherit;
 }
 
 .section__title {
@@ -226,10 +263,12 @@ img {
 
 .headline__subtitle {
   padding: 0 26%;
+  margin-bottom: 40px;
 }
 
 .benefits {
   display: flex;
+  margin-bottom: 120px;
 }
 
 .benefits__item {
@@ -281,6 +320,16 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.benefit__title {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.benefit__description {
+  font-weight: 200;
+}
+
 .section-why {
   position: relative;
   background: url("../img/decor/grey-leaf-left.png") left top 57% no-repeat;
@@ -289,13 +338,11 @@ img {
 .section-why:before {
   content: url("../img/decor/bars-with-raspberry.png");
   position: absolute;
-  bottom: -80px;
+  bottom: -130px;
   left: 0;
 }
 
 .reviews__display {
-  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
-  padding: 50px 45px 34px;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -316,6 +363,9 @@ img {
 
 .reviews__display-inner {
   display: flex;
+  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
+  padding: 50px 45px 35px;
+  margin-bottom: 22px;
 }
 
 .reviews__avatar {
@@ -353,6 +403,8 @@ img {
 
 .reviews__switcher {
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .interactive-avatar {
@@ -382,5 +434,178 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.section-reviews {
+  position: relative;
+  background: url("../img/decor/reviews-pattern-left.png") left bottom -50% no-repeat;
+}
+
+.section-reviews:before {
+  content: url("../img/decor/reviews-berries-left.png");
+  position: absolute;
+  bottom: -95px;
+  left: 4px;
+}
+
+.section-reviews:after {
+  content: url("../img/decor/reviews-berries-right.png");
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 20%;
+  right: 3%;
+  z-index: 100;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: #f2f5f4;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+
+.fixed-menu__link:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f2f5f4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+}
+
+.form__col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form__col:last-child {
+  margin-right: 0;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  width: 100%;
+  height: 60px;
+  padding: 18px 11px;
+  border: solid 3px transparent;
+}
+
+.form__input:focus {
+  border-color: #dee2bd;
+  outline: none;
+}
+
+.form__input--textarea {
+  height: 180px;
+  resize: none;
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__btns {
+  margin-top: 40px;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 9px;
+  margin-right: 25px;
+}
+
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+
+.radio--checkbox .radio__visible:before {
+  background: url("../img/icons/checkmark.svg") center center no-repeat;
+}
+
+.radio__elem {
+  display: none;
+}
+
+.radio__elem:checked ~ .radio__visible:before {
+  display: block;
+}
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 10px;
+}
+
+.radio__visible:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #365a49;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-order {
+  position: relative;
+  background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
+}
+
+.section-order:before {
+  content: url("../img/decor/order-berry-left.png");
+  position: absolute;
+  bottom: 80px;
+  left: 18px;
+}
+
+.section-order:after {
+  content: url("../img/decor/order-leaf-right.png");
+  position: absolute;
+  bottom: 80px;
+  right: 2px;
 }
 /*# sourceMappingURL=main.css.map */

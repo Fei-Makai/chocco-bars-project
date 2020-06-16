@@ -1,5 +1,5 @@
 .banner {
-  background: url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
+  background: url("../img/decor/banner-leaves-middle-right.png") right 2% bottom 20% no-repeat, url("../img/decor/banner-berries-middle-right.png") right 25% bottom 5% no-repeat, url("../img/decor/choc-bars.png") left 95% center no-repeat, url("../img/decor/big-leaf.png") right bottom no-repeat;
   background-color: $blue;
   height: 100vh;
   min-height: 650px;
@@ -12,6 +12,12 @@
     bottom: -48px;
     left: 2%;
     content: url("../img/decor/leaf-left.png");
+  }
+  &:after {
+    position: absolute;
+    bottom: -55px;
+    right: 10%;
+    content: url("../img/decor/banner-berries-bottom-right.png");
   }
 } 
 

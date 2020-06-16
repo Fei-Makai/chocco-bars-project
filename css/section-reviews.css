@@ -1,0 +1,19 @@
+.section-reviews {
+  position: relative;
+  background: url("../img/decor/reviews-pattern-left.png") left bottom -50% no-repeat;
+}
+
+.section-reviews:before {
+  content: url("../img/decor/reviews-berries-left.png");
+  position: absolute;
+  bottom: -95px;
+  left: 4px;
+}
+
+.section-reviews:after {
+  content: url("../img/decor/reviews-berries-right.png");
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+/*# sourceMappingURL=section-reviews.css.map */

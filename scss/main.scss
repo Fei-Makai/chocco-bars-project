@@ -5,6 +5,9 @@ $baseFontSize: 18px;
 $blue: #61c4d9;
 $darkGreen: #0b4d3c;
 
+//z-indexes
+$z-fixed-menu: 100;
+
 //normalize
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 
@@ -25,7 +28,8 @@ $darkGreen: #0b4d3c;
 @import "components/section-why";
 @import "components/reviews";
 @import "components/interactive-avatar";
-
-
-
-
+@import "components/section-reviews";
+@import "components/fixed-menu";
+@import "components/form";
+@import "components/radio";
+@import "components/section-order";

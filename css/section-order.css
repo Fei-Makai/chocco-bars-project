@@ -1,0 +1,19 @@
+.section-order {
+  position: relative;
+  background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
+}
+
+.section-order:before {
+  content: url("../img/decor/order-berry-left.png");
+  position: absolute;
+  bottom: 80px;
+  left: 18px;
+}
+
+.section-order:after {
+  content: url("../img/decor/order-leaf-right.png");
+  position: absolute;
+  bottom: 80px;
+  right: 2px;
+}
+/*# sourceMappingURL=section-order.css.map */

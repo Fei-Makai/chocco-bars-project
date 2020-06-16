@@ -20,4 +20,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.benefit__title {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.benefit__description {
+  font-weight: 200;
+}
 /*# sourceMappingURL=benefit.css.map */

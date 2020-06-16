@@ -1,6 +1,4 @@
 .reviews__display {
-  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
-  padding: 50px 45px 34px;
   margin-bottom: 20px;
   overflow: hidden;
   position: relative;
@@ -21,6 +19,9 @@
 
 .reviews__display-inner {
   display: flex;
+  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
+  padding: 50px 45px 35px;
+  margin-bottom: 22px;
 }
 
 .reviews__avatar {
@@ -58,4 +59,10 @@
 
 .reviews__switcher {
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.reviews__switcher-item {
+
 }
