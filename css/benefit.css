@@ -21,6 +21,10 @@
   transform: translate(-50%, -50%);
 }
 
+.benefit__icon::before {
+  filter: brightness(0) saturate(100%);
+}
+
 .benefit__title {
   font-size: 27px;
   font-weight: bold;

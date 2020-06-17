@@ -158,6 +158,7 @@ img {
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  filter: invert(100%) sepia(0%) saturate(6137%) hue-rotate(324deg) brightness(107%) contrast(100%);
 }
 
 .features {
@@ -320,6 +321,10 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.benefit__icon::before {
+  filter: brightness(0) saturate(100%);
+}
+
 .benefit__title {
   font-size: 27px;
   font-weight: bold;
@@ -414,6 +419,10 @@ img {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+}
+
+.interactive-avatar:hover {
+  border-color: #0f5a47;
 }
 
 .interactive-avatar--active {
@@ -558,6 +567,7 @@ img {
 
 .radio--checkbox .radio__visible:before {
   background: url("../img/icons/checkmark.svg") center center no-repeat;
+  filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
 }
 
 .radio__elem {

@@ -11,6 +11,7 @@
 
       &:before {
         background: url("../img/icons/checkmark.svg") center center no-repeat;
+        filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
       }
 
     }
@@ -47,4 +48,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
 }

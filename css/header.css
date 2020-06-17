@@ -32,5 +32,6 @@
   width: 12px;
   height: 12px;
   margin-right: 6px;
+  filter: invert(100%) sepia(0%) saturate(6137%) hue-rotate(324deg) brightness(107%) contrast(100%);
 }
 /*# sourceMappingURL=header.css.map */
