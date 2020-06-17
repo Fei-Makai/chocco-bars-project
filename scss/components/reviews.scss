@@ -1,5 +1,7 @@
-.reviews__display {
-  margin-bottom: 20px;
+.reviews__display-inner {
+  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
+  padding: 50px 45px 35px;
+  margin-bottom: 22px;
   overflow: hidden;
   position: relative;
 
@@ -17,11 +19,8 @@
   }
 }
 
-.reviews__display-inner {
+.reviews__list-item {
   display: flex;
-  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
-  padding: 50px 45px 35px;
-  margin-bottom: 22px;
 }
 
 .reviews__avatar {
@@ -38,20 +37,27 @@
 .reviews__content {
   flex: 1;
   margin-left: 20px;
-}
 
-.reviews__title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 22px;
-  color: black;
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    color: black;
+  }
+
+  h4 {
+    font-size: $baseFontSize;
+    font-weight: bold;
+    color: black;
+  }
 }
 
 .reviews__text {
   margin-bottom: 36px;
+  width: 85%;
 }
 
-.reviews__author {
+.reviews__authors {
   font-size: $baseFontSize;
   font-weight: bold;
   color: black;

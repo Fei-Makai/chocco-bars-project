@@ -1,13 +1,11 @@
 .section-reviews {
   position: relative;
-  background: url("../img/decor/reviews-pattern-left.png") left bottom -50% no-repeat;
 }
 
 .section-reviews:before {
-  content: url("../img/decor/reviews-berries-left.png");
+  content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
   position: absolute;
-  bottom: -95px;
-  left: 4px;
+  bottom: -160px;
 }
 
 .section-reviews:after {
