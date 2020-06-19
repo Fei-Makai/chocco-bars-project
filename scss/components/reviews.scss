@@ -21,6 +21,10 @@
 
 .reviews__list-item {
   display: flex;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .reviews__avatar {
