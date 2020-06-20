@@ -1,0 +1,657 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -mos-osx-font-smoothing: grayscale;
+  position: relative;
+  color: #666666;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.banner {
+  background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
+  background-color: #61c4d9;
+  height: 100vh;
+  min-height: 650px;
+  color: #fff;
+  padding: 24px 0 45px;
+  position: relative;
+}
+
+.banner:before {
+  position: absolute;
+  bottom: -48px;
+  left: 2%;
+  content: url("../img/decor/banner-leaf-bottom-left.png");
+}
+
+.banner:after {
+  position: absolute;
+  bottom: -55px;
+  right: 10%;
+  content: url("../img/decor/banner-leaves-berries-bottom-right.png");
+}
+
+.banner__title-section {
+  width: 100%;
+  margin-top: 120px;
+}
+
+.banner__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.banner__main-content {
+  display: flex;
+  align-items: center;
+}
+
+.banner__col {
+  flex: 1;
+}
+
+.banner__main-title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.banner__title-description {
+  font-size: 21px;
+  margin-bottom: 50px;
+  padding-right: 10%;
+}
+
+.banner__image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: -120px;
+}
+
+.banner__image:after {
+  position: absolute;
+  bottom: 5%;
+  right: -5%;
+  content: url("../img/decor/banner-leaves-middle-right.png");
+}
+
+.banner__icons-section {
+  margin-top: 75px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 15px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.phone-number {
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number__icon-elem {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  filter: invert(100%) sepia(0%) saturate(6137%) hue-rotate(324deg) brightness(107%) contrast(100%);
+}
+
+.features {
+  display: flex;
+}
+
+.features__item {
+  margin-right: 46px;
+}
+
+.features__item:last-chilg {
+  margin-right: 0;
+}
+
+.feature {
+  display: flex;
+}
+
+.feature__icon {
+  width: 45px;
+  margin-right: 7px;
+}
+
+.feature__text {
+  font-size: 16px;
+  max-width: 85px;
+}
+
+.btn {
+  font-size: 19px;
+  font-weight: bold;
+  padding: 18px 35px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+}
+
+.btn--theme-white {
+  background: #fff;
+  color: #0b4d3c;
+}
+
+.btn--theme-white:hover {
+  background: #0b4d3c;
+  color: #fff;
+}
+
+.btn--theme-green {
+  background: #0b4d3c;
+  color: #fff;
+}
+
+.btn--theme-green:hover {
+  background: #fff;
+  color: #0b4d3c;
+}
+
+.btn--theme-transparent {
+  background: transparent;
+  color: #000;
+  text-transform: none;
+}
+
+.btn--theme-transparent:hover {
+  background: transparent;
+  color: #0b4d3c;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section--font-color--green {
+  color: #0b4d3c;
+}
+
+.section--font-color--green .section__title {
+  color: inherit;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.headline {
+  text-align: center;
+}
+
+.headline__title {
+  margin-bottom: 25px;
+}
+
+.headline__subtitle {
+  padding: 0 26%;
+  margin-bottom: 40px;
+}
+
+.benefits {
+  display: flex;
+  margin-bottom: 120px;
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+
+.benefits__item:before {
+  content: url("../img/decor/separator.png");
+  position: absolute;
+  top: 30px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.benefits__item:first-child {
+  padding-left: 0;
+}
+
+.benefits__item:last-child {
+  padding-right: 0;
+}
+
+.benefits__item:last-child:before {
+  display: none;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit__image-wrapper {
+  display: inline-block;
+  width: 126px;
+  height: 126px;
+  position: relative;
+  background-color: #f2f5f4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.benefit__icon {
+  width: 75px;
+  height: 69px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefit__icon::before {
+  filter: brightness(0) saturate(100%);
+}
+
+.benefit__text h3 {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.benefit__description {
+  font-weight: 200;
+}
+
+.section-why {
+  position: relative;
+  background: url("../img/decor/grey-leaf-left.png") left top 57% no-repeat;
+}
+
+.section-why:before {
+  content: url("../img/decor/bars-with-raspberry.png");
+  position: absolute;
+  bottom: -130px;
+  left: 0;
+}
+
+.reviews__display-inner {
+  background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
+  padding: 50px 45px 35px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews__display-inner:before {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -65px;
+}
+
+.reviews__list-item {
+  display: none;
+}
+
+.reviews__list-item--active {
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 254px;
+  height: 260px;
+}
+
+.reviews__avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.reviews__content h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 22px;
+  color: black;
+}
+
+.reviews__content h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.reviews__text {
+  margin-bottom: 36px;
+  width: 85%;
+}
+
+.reviews__authors {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.interactive-avatar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.interactive-avatar:hover {
+  border-color: #0f5a47;
+}
+
+.interactive-avatar--active {
+  border-color: #0f5a47;
+}
+
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
+.interactive-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-reviews {
+  position: relative;
+}
+
+.section-reviews:before {
+  content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
+  position: absolute;
+  bottom: -160px;
+}
+
+.section-reviews:after {
+  content: url("../img/decor/reviews-berries-right.png");
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 35%;
+  right: 3%;
+  z-index: 100;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: #3a77a7;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+
+.fixed-menu__link:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3a77a7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  display: flex;
+}
+
+.form__col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form__col:last-child {
+  margin-right: 0;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  width: 100%;
+  height: 60px;
+  padding: 18px 11px;
+  border: solid 3px transparent;
+}
+
+.form__input:focus {
+  border-color: #dee2bd;
+  outline: none;
+}
+
+.form__input--textarea {
+  height: 180px;
+  resize: none;
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__btns {
+  margin-top: 40px;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 9px;
+  margin-right: 25px;
+}
+
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+
+.radio--checkbox .radio__visible:before {
+  background: url("../img/icons/checkmark.svg") center center no-repeat;
+  filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
+}
+
+.radio__elem {
+  display: none;
+}
+
+.radio__elem:checked ~ .radio__visible:before {
+  display: block;
+}
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 10px;
+}
+
+.radio__visible:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #365a49;
+  border-radius: 50%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-order {
+  position: relative;
+  background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
+}
+
+.section-order:before {
+  content: url("../img/decor/order-berry-left.png");
+  position: absolute;
+  bottom: 80px;
+  left: 18px;
+}
+
+.section-order:after {
+  content: url("../img/decor/order-leaf-right.png");
+  position: absolute;
+  bottom: 80px;
+  right: 2px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,12 @@
+.features {
+  display: flex;
+}
+
+.features__item {
+  margin-right: 46px;
+
+  &:last-chilg {
+    margin-right: 0;
+  }
+}
+

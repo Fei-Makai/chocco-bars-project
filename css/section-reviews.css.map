@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACf,QAAQ,EAAE,QAAQ;CAcnB;;AAfD,AAGE,gBAHc,AAGb,OAAO,CAAC;EACP,OAAO,EAAE,wDAAwD;EACjE,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,MAAM;CACf;;AAPH,AASE,gBATc,AASb,MAAM,CAAC;EACN,OAAO,EAAE,6CAA6C;EACtD,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "../scss/components/section-reviews.scss"
+    ],
+    "names": [],
+    "file": "section-reviews.css"
+}
