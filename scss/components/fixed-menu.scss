@@ -1,6 +1,6 @@
 .fixed-menu {
   position: fixed;
-  top: 20%;
+  top: 35%;
   right: 3%;
   z-index: $z-fixed-menu;
 }
@@ -10,7 +10,7 @@
 
   &--active {
     .fixed-menu__link {
-      border-color: #f2f5f4;
+      border-color: #3a77a7;
     }
   }
 }
@@ -28,7 +28,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #f2f5f4;
+    background: #3a77a7;
     position: absolute;
     top: 50%;
     left: 50%;

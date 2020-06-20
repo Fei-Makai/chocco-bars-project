@@ -23,17 +23,19 @@
 
 .banner__title-section {
   width: 100%;
+  margin-top: 120px;
 }
 
 .banner__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
 }
 
 .banner__main-content {
   display: flex;
+  align-items: center;
 }
 
 .banner__col {
@@ -58,6 +60,7 @@
   height: 100%;
   width: 100%;
   position: relative;
+  margin-bottom: -120px;
 
   &:after {
     position: absolute;

@@ -20,10 +20,10 @@
 }
 
 .reviews__list-item {
-  display: flex;
+  display: none;
 
-  &--hidden {
-    display: none;
+  &--active {
+    display: flex;
   }
 }
 
