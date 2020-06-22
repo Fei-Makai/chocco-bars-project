@@ -2,28 +2,38 @@
   background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: $blue;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   color: #fff;
-  padding: 24px 0 45px;
+  padding: rem(24px) 0 rem(45px);
   position: relative;
 
   &:before {
     position: absolute;
-    bottom: -48px;
+    bottom: rem(-48px);
     left: 2%;
     content: url("../img/decor/banner-leaf-bottom-left.png");
   }
   &:after {
     position: absolute;
-    bottom: -55px;
+    bottom: rem(-55px);
     right: 10%;
     content: url("../img/decor/banner-leaves-berries-bottom-right.png");
+  }
+
+  @include tablets {
+    background: url("../img/decor/banner-big-leaf.png") right top 10% no-repeat;
+    background-color: $blue;
   }
 } 
 
 .banner__title-section {
   width: 100%;
-  margin-top: 120px;
+  margin-top: rem(120px);
+
+  @include tablets {
+    text-align: center;
+    margin-top: rem(28px);
+  }
 }
 
 .banner__container {
@@ -31,11 +41,20 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  @include tablets {
+    justify-content: normal;
+  }
 }
 
 .banner__main-content {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column-reverse;
+    margin-top: 15vh;
+  }
 }
 
 .banner__col {
@@ -43,24 +62,28 @@
 }
 
 .banner__main-title {
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   text-transform: uppercase;
 }
 
 .banner__title-description {
-  font-size: 21px;
-  margin-bottom: 50px;
-  padding-right: 10%;
+  font-size: rem(21px);
+  margin-bottom: rem(50px);
+  padding: 10%;
+
+  @include tablets {
+    padding: 0 20%;
+  }
 }
 
 .banner__image {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-bottom: -120px;
+  margin-bottom: rem(-120px);
 
   &:after {
     position: absolute;
@@ -68,8 +91,21 @@
     right: -5%;
     content: url("../img/decor/banner-leaves-middle-right.png");
   }
+
+  @include tablets {
+    margin-bottom: 0;
+
+    &--img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
 }
 
 .banner__icons-section {
-  margin-top: 75px;
+  margin-top: rem(75px);
+
+  @include tablets {
+    display: none;
+  }
 }

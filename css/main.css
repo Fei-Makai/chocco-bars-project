@@ -1,12 +1,27 @@
 @import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+html {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 18px;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -18,13 +33,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   position: relative;
 }
@@ -79,29 +94,43 @@ img {
   background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
   height: 100vh;
-  min-height: 650px;
+  min-height: 36.11111rem;
   color: #fff;
-  padding: 24px 0 45px;
+  padding: 1.33333rem 0 2.5rem;
   position: relative;
 }
 
 .banner:before {
   position: absolute;
-  bottom: -48px;
+  bottom: -2.66667rem;
   left: 2%;
   content: url("../img/decor/banner-leaf-bottom-left.png");
 }
 
 .banner:after {
   position: absolute;
-  bottom: -55px;
+  bottom: -3.05556rem;
   right: 10%;
   content: url("../img/decor/banner-leaves-berries-bottom-right.png");
 }
 
+@media screen and (max-width: 768px) {
+  .banner {
+    background: url("../img/decor/banner-big-leaf.png") right top 10% no-repeat;
+    background-color: #61c4d9;
+  }
+}
+
 .banner__title-section {
   width: 100%;
-  margin-top: 120px;
+  margin-top: 6.66667rem;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__title-section {
+    text-align: center;
+    margin-top: 1.55556rem;
+  }
 }
 
 .banner__container {
@@ -111,9 +140,22 @@ img {
   height: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .banner__container {
+    justify-content: normal;
+  }
+}
+
 .banner__main-content {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__main-content {
+    flex-direction: column-reverse;
+    margin-top: 15vh;
+  }
 }
 
 .banner__col {
@@ -121,24 +163,30 @@ img {
 }
 
 .banner__main-title {
-  font-size: 48px;
+  font-size: 2.66667rem;
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 0.83333rem;
   text-transform: uppercase;
 }
 
 .banner__title-description {
-  font-size: 21px;
-  margin-bottom: 50px;
-  padding-right: 10%;
+  font-size: 1.16667rem;
+  margin-bottom: 2.77778rem;
+  padding: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__title-description {
+    padding: 0 20%;
+  }
 }
 
 .banner__image {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-bottom: -120px;
+  margin-bottom: -6.66667rem;
 }
 
 .banner__image:after {
@@ -148,8 +196,24 @@ img {
   content: url("../img/decor/banner-leaves-middle-right.png");
 }
 
+@media screen and (max-width: 768px) {
+  .banner__image {
+    margin-bottom: 0;
+  }
+  .banner__image--img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
 .banner__icons-section {
-  margin-top: 75px;
+  margin-top: 4.16667rem;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__icons-section {
+    display: none;
+  }
 }
 
 .header {
@@ -158,13 +222,19 @@ img {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
 .menu__list {
   display: flex;
   align-items: center;
 }
 
 .menu__item {
-  margin-right: 15px;
+  margin-right: 0.83333rem;
 }
 
 .menu__item:last-child {
@@ -176,17 +246,23 @@ img {
 }
 
 .phone-number {
-  font-size: 24px;
+  font-size: 1.33333rem;
   text-decoration: none;
   display: flex;
   align-items: center;
 }
 
 .phone-number__icon-elem {
-  width: 12px;
-  height: 12px;
-  margin-right: 6px;
+  width: 0.66667rem;
+  height: 0.66667rem;
+  margin-right: 0.33333rem;
   filter: invert(100%) sepia(0%) saturate(6137%) hue-rotate(324deg) brightness(107%) contrast(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .phone-number__tablets {
+    display: none;
+  }
 }
 
 .features {
@@ -194,7 +270,7 @@ img {
 }
 
 .features__item {
-  margin-right: 46px;
+  margin-right: 2.55556rem;
 }
 
 .features__item:last-chilg {
@@ -206,21 +282,21 @@ img {
 }
 
 .feature__icon {
-  width: 45px;
-  margin-right: 7px;
+  width: 2.5rem;
+  margin-right: 0.38889rem;
 }
 
 .feature__text {
-  font-size: 16px;
-  max-width: 85px;
+  font-size: 0.88889rem;
+  max-width: 4.72222rem;
 }
 
 .btn {
-  font-size: 19px;
+  font-size: 1.05556rem;
   font-weight: bold;
-  padding: 18px 35px;
+  padding: 1rem 1.94444rem;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 5.55556rem;
   line-height: 1;
   text-decoration: none;
   border: none;
@@ -259,7 +335,7 @@ img {
 
 .section {
   height: 100vh;
-  min-height: 650px;
+  min-height: 36.11111rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -274,9 +350,9 @@ img {
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: 2.66667rem;
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 3.33333rem;
   text-align: center;
   text-transform: uppercase;
   color: #000;
@@ -287,17 +363,23 @@ img {
 }
 
 .headline__title {
-  margin-bottom: 25px;
+  margin-bottom: 1.38889rem;
 }
 
 .headline__subtitle {
   padding: 0 26%;
-  margin-bottom: 40px;
+  margin-bottom: 2.22222rem;
+}
+
+@media screen and (max-width: 768px) {
+  .headline__subtitle {
+    padding: 0 22%;
+  }
 }
 
 .benefits {
   display: flex;
-  margin-bottom: 120px;
+  margin-bottom: 6.66667rem;
 }
 
 .benefits__item {
@@ -309,7 +391,7 @@ img {
 .benefits__item:before {
   content: url("../img/decor/separator.png");
   position: absolute;
-  top: 30px;
+  top: 1.66667rem;
   right: 0;
   transform: translateX(50%);
 }
@@ -332,8 +414,8 @@ img {
 
 .benefit__image-wrapper {
   display: inline-block;
-  width: 126px;
-  height: 126px;
+  width: 7rem;
+  height: 7rem;
   position: relative;
   background-color: #f2f5f4;
   border-radius: 50%;
@@ -341,8 +423,8 @@ img {
 }
 
 .benefit__icon {
-  width: 75px;
-  height: 69px;
+  width: 4.16667rem;
+  height: 3.83333rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -354,9 +436,9 @@ img {
 }
 
 .benefit__text h3 {
-  font-size: 27px;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 1.38889rem;
 }
 
 .benefit__description {
@@ -371,14 +453,20 @@ img {
 .section-why:before {
   content: url("../img/decor/bars-with-raspberry.png");
   position: absolute;
-  bottom: -130px;
+  bottom: -7.22222rem;
   left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .section-why {
+    background: url("../img/decor/grey-leaf-left.png") left top 3% no-repeat;
+  }
 }
 
 .reviews__display-inner {
   background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
-  padding: 50px 45px 35px;
-  margin-bottom: 22px;
+  padding: 2.77778rem 2.5rem 1.94444rem;
+  margin-bottom: 1.22222rem;
   overflow: hidden;
   position: relative;
 }
@@ -386,14 +474,14 @@ img {
 .reviews__display-inner:before {
   content: "";
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 5rem;
+  height: 5rem;
   background: #fff;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -65px;
+  top: -3.61111rem;
 }
 
 .reviews__list-item {
@@ -404,9 +492,22 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .reviews__list-item--active {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .reviews__avatar {
-  width: 254px;
-  height: 260px;
+  width: 14.11111rem;
+  height: 14.44444rem;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__avatar {
+    margin-bottom: 1.38889rem;
+  }
 }
 
 .reviews__avatar-img {
@@ -417,13 +518,19 @@ img {
 
 .reviews__content {
   flex: 1;
-  margin-left: 20px;
+  margin-left: 1.11111rem;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    text-align: center;
+  }
 }
 
 .reviews__content h3 {
-  font-size: 30px;
+  font-size: 1.66667rem;
   font-weight: bold;
-  margin-bottom: 22px;
+  margin-bottom: 1.22222rem;
   color: black;
 }
 
@@ -434,8 +541,14 @@ img {
 }
 
 .reviews__text {
-  margin-bottom: 36px;
+  margin-bottom: 2rem;
   width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__text {
+    width: 100%;
+  }
 }
 
 .reviews__authors {
@@ -447,13 +560,13 @@ img {
 .reviews__switcher {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.11111rem;
 }
 
 .interactive-avatar {
-  width: 80px;
-  height: 80px;
-  border: 6px solid transparent;
+  width: 4.44444rem;
+  height: 4.44444rem;
+  border: 0.33333rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
@@ -490,14 +603,14 @@ img {
 .section-reviews:before {
   content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
   position: absolute;
-  bottom: -160px;
+  bottom: -8.88889rem;
 }
 
 .section-reviews:after {
   content: url("../img/decor/reviews-berries-right.png");
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: 0.83333rem;
+  right: 0.55556rem;
 }
 
 .fixed-menu {
@@ -507,8 +620,14 @@ img {
   z-index: 100;
 }
 
+@media screen and (max-width: 768px) {
+  .fixed-menu {
+    display: none;
+  }
+}
+
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: 0.27778rem;
 }
 
 .fixed-menu__item--active .fixed-menu__link {
@@ -516,18 +635,18 @@ img {
 }
 
 .fixed-menu__link {
-  width: 16px;
-  height: 16px;
+  width: 0.88889rem;
+  height: 0.88889rem;
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: 0.05556rem solid transparent;
   display: block;
   position: relative;
 }
 
 .fixed-menu__link:before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0.33333rem;
+  height: 0.33333rem;
   border-radius: 50%;
   background: #3a77a7;
   position: absolute;
@@ -540,23 +659,36 @@ img {
   display: flex;
 }
 
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 0 19%;
+    flex-direction: column;
+  }
+}
+
 .form__col {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.11111rem;
 }
 
 .form__col:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .form__col {
+    margin-right: 0;
+  }
+}
+
 .form__row {
   display: flex;
-  margin-bottom: 18px;
+  margin-bottom: 1rem;
 }
 
 .form__block {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 1.11111rem;
 }
 
 .form__block:last-child {
@@ -565,9 +697,9 @@ img {
 
 .form__input {
   width: 100%;
-  height: 60px;
-  padding: 18px 11px;
-  border: solid 3px transparent;
+  height: 3.33333rem;
+  padding: 1rem 0.61111rem;
+  border: solid 0.16667rem transparent;
 }
 
 .form__input:focus {
@@ -575,9 +707,21 @@ img {
   outline: none;
 }
 
+@media screen and (max-width: 768px) {
+  .form__input {
+    height: 1.88889rem;
+  }
+}
+
 .form__input--textarea {
-  height: 180px;
+  height: 10rem;
   resize: none;
+}
+
+@media screen and (max-width: 768px) {
+  .form__input--textarea {
+    height: 4.44444rem;
+  }
 }
 
 .form__controls {
@@ -586,15 +730,21 @@ img {
 }
 
 .form__btns {
-  margin-top: 40px;
+  margin-top: 2.22222rem;
+}
+
+@media screen and (max-width: 768px) {
+  .form__btns {
+    text-align: center;
+  }
 }
 
 .radio {
   display: flex;
   cursor: pointer;
   user-select: none;
-  margin-bottom: 9px;
-  margin-right: 25px;
+  margin-bottom: 0.5rem;
+  margin-right: 1.38889rem;
 }
 
 .radio--checkbox .radio__visible {
@@ -615,18 +765,18 @@ img {
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: 1.44444rem;
+  height: 1.44444rem;
   position: relative;
   border-radius: 50%;
   background: #fff;
-  margin-right: 10px;
+  margin-right: 0.55556rem;
 }
 
 .radio__visible:before {
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 0.77778rem;
+  height: 0.77778rem;
   background: #365a49;
   border-radius: 50%;
   display: none;
@@ -644,14 +794,23 @@ img {
 .section-order:before {
   content: url("../img/decor/order-berry-left.png");
   position: absolute;
-  bottom: 80px;
-  left: 18px;
+  bottom: 4.44444rem;
+  left: 1rem;
 }
 
 .section-order:after {
   content: url("../img/decor/order-leaf-right.png");
   position: absolute;
-  bottom: 80px;
-  right: 2px;
+  bottom: 4.44444rem;
+  right: 0.11111rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section-order:before {
+    content: "";
+  }
+  .section-order:after {
+    content: "";
+  }
 }
 /*# sourceMappingURL=main.css.map */

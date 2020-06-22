@@ -3,10 +3,14 @@
 }
 
 .headline__title {
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
 }
 
 .headline__subtitle {
   padding: 0 26%;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
+
+  @include tablets {
+    padding: 0 22%;
+  }
 }

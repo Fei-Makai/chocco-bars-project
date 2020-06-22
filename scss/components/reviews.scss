@@ -1,21 +1,21 @@
 .reviews__display-inner {
   background: #f8faf9 url("../img/decor/reviews-berry-grey-right.png") right top no-repeat;
-  padding: 50px 45px 35px;
-  margin-bottom: 22px;
+  padding: rem(50px) rem(45px) rem(35px);
+  margin-bottom: rem(22px);
   overflow: hidden;
   position: relative;
 
   &:before {
     content: "";
     display: block;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     background: #fff;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -65px;
+    top: rem(-65px);
   }
 }
 
@@ -24,12 +24,21 @@
 
   &--active {
     display: flex;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 
 .reviews__avatar {
-  width: 254px;
-  height: 260px;
+  width: rem(254px);
+  height: rem(260px);
+
+  @include tablets {
+    margin-bottom: rem(25px);
+  }
 }
 
 .reviews__avatar-img {
@@ -40,12 +49,16 @@
 
 .reviews__content {
   flex: 1;
-  margin-left: 20px;
+  margin-left: rem(20px);
+
+  @include tablets {
+    text-align: center;
+  }
 
   h3 {
-    font-size: 30px;
+    font-size: rem(30px);
     font-weight: bold;
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
     color: black;
   }
 
@@ -57,8 +70,12 @@
 }
 
 .reviews__text {
-  margin-bottom: 36px;
+  margin-bottom: rem(36px);
   width: 85%;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .reviews__authors {
@@ -70,7 +87,7 @@
 .reviews__switcher {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 
 .reviews__switcher-item {

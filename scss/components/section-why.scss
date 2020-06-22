@@ -5,7 +5,11 @@
   &:before {
     content: url("../img/decor/bars-with-raspberry.png");
     position: absolute;
-    bottom: -130px;
+    bottom: rem(-130px);
     left: 0;
+  }
+
+  @include tablets {
+    background: url("../img/decor/grey-leaf-left.png") left top 3% no-repeat;
   }
 }
