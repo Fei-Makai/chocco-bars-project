@@ -11,8 +11,7 @@
 }
 
 .radio--checkbox .radio__visible:before {
-  background: url("../img/icons/checkmark.svg") center center no-repeat;
-  filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
+  content: none;
 }
 
 .radio__elem {
@@ -23,6 +22,10 @@
   display: block;
 }
 
+.radio__elem:checked ~ .radio__visible .radio__visible-icon {
+  display: block;
+}
+
 .radio__visible {
   width: rem(26px);
   height: rem(26px);
@@ -30,6 +33,17 @@
   border-radius: 50%;
   background: #fff;
   margin-right: rem(10px);
+}
+
+.radio__visible-icon {
+  width: 0.77778rem;
+  height: 0.77778rem;
+  fill: #365a49;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .radio__visible:before {

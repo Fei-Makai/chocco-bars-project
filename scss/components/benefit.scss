@@ -19,6 +19,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: #2e2e2d;
 
   &::before {
     filter: brightness(0) saturate(100%);

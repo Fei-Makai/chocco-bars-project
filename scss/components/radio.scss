@@ -10,10 +10,8 @@
       border-radius: 0;
 
       &:before {
-        background: url("../img/icons/checkmark.svg") center center no-repeat;
-        filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
+        content: none;
       }
-
     }
   }
 }
@@ -26,6 +24,10 @@
       display: block;
     }
   }
+
+  &:checked ~ .radio__visible .radio__visible-icon{
+    display: block;
+  }
 }
 
 .radio__visible {
@@ -35,6 +37,17 @@
   border-radius: 50%;
   background: #fff;
   margin-right: rem(10px);
+
+  &-icon {
+    width: 0.77778rem;
+    height: 0.77778rem;
+    fill: #365a49;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
 
   &:before {
     content: "";
@@ -48,5 +61,4 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
 }

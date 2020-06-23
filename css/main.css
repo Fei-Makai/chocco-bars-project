@@ -93,7 +93,7 @@ img {
 .banner {
   background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
-  height: 100vh;
+  height: 100%;
   min-height: 36.11111rem;
   color: #fff;
   padding: 1.33333rem 0 2.5rem;
@@ -256,7 +256,7 @@ img {
   width: 0.66667rem;
   height: 0.66667rem;
   margin-right: 0.33333rem;
-  filter: invert(100%) sepia(0%) saturate(6137%) hue-rotate(324deg) brightness(107%) contrast(100%);
+  fill: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -283,7 +283,9 @@ img {
 
 .feature__icon {
   width: 2.5rem;
+  height: 2.5rem;
   margin-right: 0.38889rem;
+  fill: #c6f7ff;
 }
 
 .feature__text {
@@ -429,6 +431,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: #2e2e2d;
 }
 
 .benefit__icon::before {
@@ -752,8 +755,7 @@ img {
 }
 
 .radio--checkbox .radio__visible:before {
-  background: url("../img/icons/checkmark.svg") center center no-repeat;
-  filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
+  content: none;
 }
 
 .radio__elem {
@@ -764,6 +766,10 @@ img {
   display: block;
 }
 
+.radio__elem:checked ~ .radio__visible .radio__visible-icon {
+  display: block;
+}
+
 .radio__visible {
   width: 1.44444rem;
   height: 1.44444rem;
@@ -771,6 +777,17 @@ img {
   border-radius: 50%;
   background: #fff;
   margin-right: 0.55556rem;
+}
+
+.radio__visible-icon {
+  width: 0.77778rem;
+  height: 0.77778rem;
+  fill: #365a49;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .radio__visible:before {
