@@ -10,6 +10,15 @@
   }
 
   @include tablets {
-    background: url("../img/decor/grey-leaf-left.png") left top 3% no-repeat;
+    background-position: left top 10%;
+    background-repeat: no-repeat;
+  }
+
+  @include phones {
+    background: none;
+
+    &:before {
+      content: none;
+    }
   }
 }

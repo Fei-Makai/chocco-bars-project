@@ -22,6 +22,10 @@ body {
   -mos-osx-font-smoothing: grayscale;
   position: relative;
   color: #666666;
+
+  @include phones {
+    line-height: 1;
+  }
 }
 
 .wrapper {

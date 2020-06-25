@@ -5,6 +5,7 @@
     content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
     position: absolute;
     bottom: rem(-160px);
+    z-index: $z-reviews-before-img;
   }
 
   &:after {
@@ -12,5 +13,18 @@
     position: absolute;
     top: rem(15px);
     right: rem(10px);
+  }
+
+  @include phones {
+
+    &:before {
+      left: -7%;
+      bottom: -24%;
+    }
+
+    &:after {
+      top: 0;
+      right: -6%;
+    }
   }
 }

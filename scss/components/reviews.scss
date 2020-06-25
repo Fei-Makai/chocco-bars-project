@@ -17,6 +17,10 @@
     transform: translateX(-50%);
     top: rem(-65px);
   }
+
+  @include tablets {
+    padding: rem(50px) 0 0;
+  }
 }
 
 .reviews__list-item {
@@ -38,6 +42,8 @@
 
   @include tablets {
     margin-bottom: rem(25px);
+    width: rem(130px);
+    height: rem(130px);
   }
 }
 
@@ -75,6 +81,10 @@
 
   @include tablets {
     width: 100%;
+  }
+
+  @include phones {
+    font-size: rem(18px);
   }
 }
 

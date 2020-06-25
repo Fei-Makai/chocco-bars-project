@@ -11,6 +11,8 @@ $darkGreen: #0b4d3c;
 
 //z-indexesa
 $z-fixed-menu: 100;
+$z-banner-before-img: 150;
+$z-reviews-before-img: 160;
 
 @import "media";
 
@@ -24,6 +26,7 @@ $z-fixed-menu: 100;
 //components
 @import "components/section-banner";
 @import "components/header";
+@import "components/hamburger";
 @import "components/features";
 @import "components/feature";
 @import "components/btn";
@@ -39,3 +42,5 @@ $z-fixed-menu: 100;
 @import "components/form";
 @import "components/radio";
 @import "components/section-order";
+@import "components/section-map";
+@import "components/footer";

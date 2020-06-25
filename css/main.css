@@ -30,6 +30,12 @@ body {
   color: #666666;
 }
 
+@media screen and (max-width: 480px) {
+  body {
+    line-height: 1;
+  }
+}
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -91,9 +97,9 @@ img {
 }
 
 .banner {
-  background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
+  background: url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
-  height: 100%;
+  height: 100vh;
   min-height: 36.11111rem;
   color: #fff;
   padding: 1.33333rem 0 2.5rem;
@@ -107,6 +113,24 @@ img {
   content: url("../img/decor/banner-leaf-bottom-left.png");
 }
 
+@media screen and (max-width: 768px) {
+  .banner:before {
+    position: absolute;
+    left: 30%;
+    top: 17vh;
+    transform: scale(0.5);
+    z-index: 150;
+    content: url("../img/decor/banner-leaf-bottom-left.png");
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner:before {
+    left: 14%;
+    top: 18vh;
+  }
+}
+
 .banner:after {
   position: absolute;
   bottom: -3.05556rem;
@@ -115,9 +139,32 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  .banner:after {
+    right: 18vw;
+    top: 21vh;
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner:after {
+    right: 0vw;
+    top: 28vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .banner {
-    background: url("../img/decor/banner-big-leaf.png") right top 10% no-repeat;
-    background-color: #61c4d9;
+    background-position: right top 10%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner {
+    background-position: right top 17%;
+    background-repeat: no-repeat;
+    background-size: 65%;
   }
 }
 
@@ -130,6 +177,16 @@ img {
   .banner__title-section {
     text-align: center;
     margin-top: 1.55556rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__title-section {
+    margin-top: 1.27778rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1;
   }
 }
 
@@ -154,7 +211,13 @@ img {
 @media screen and (max-width: 768px) {
   .banner__main-content {
     flex-direction: column-reverse;
-    margin-top: 15vh;
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__main-content {
+    margin-top: 0;
   }
 }
 
@@ -170,15 +233,28 @@ img {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 480px) {
+  .banner__main-title {
+    font-size: 2.22222rem;
+  }
+}
+
 .banner__title-description {
   font-size: 1.16667rem;
   margin-bottom: 2.77778rem;
-  padding: 10%;
+  padding-right: 10%;
 }
 
 @media screen and (max-width: 768px) {
   .banner__title-description {
     padding: 0 20%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__title-description {
+    padding: 0 13%;
+    font-size: 1rem;
   }
 }
 
@@ -189,11 +265,49 @@ img {
   margin-bottom: -6.66667rem;
 }
 
+.banner__image:before {
+  position: absolute;
+  bottom: -10%;
+  right: 40%;
+  content: url("../img/decor/banner-berries-middle-right.png");
+}
+
+@media screen and (max-width: 768px) {
+  .banner__image:before {
+    bottom: -5%;
+    right: 35%;
+    transform: rotateZ(70deg) scale(0.6);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__image:before {
+    bottom: 10%;
+    left: 15%;
+    transform: rotateZ(75deg) scale(0.7);
+  }
+}
+
 .banner__image:after {
   position: absolute;
   bottom: 5%;
   right: -5%;
   content: url("../img/decor/banner-leaves-middle-right.png");
+}
+
+@media screen and (max-width: 768px) {
+  .banner__image:after {
+    bottom: 1%;
+    right: 10%;
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__image:after {
+    bottom: 13%;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -203,6 +317,18 @@ img {
   .banner__image--img {
     width: 50%;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner__image {
+    margin-top: 1.94444rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner__image--img {
+    width: 70%;
   }
 }
 
@@ -218,8 +344,13 @@ img {
 
 .header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+}
+
+.menu {
+  margin: 0 1.66667rem;
+  padding-top: 0.27778rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -231,10 +362,13 @@ img {
 .menu__list {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu__item {
   margin-right: 0.83333rem;
+  margin-bottom: 0.55556rem;
 }
 
 .menu__item:last-child {
@@ -243,6 +377,7 @@ img {
 
 .menu__link {
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .phone-number {
@@ -252,6 +387,18 @@ img {
   align-items: center;
 }
 
+.phone-number--theme--green {
+  color: #365a49;
+}
+
+.phone-number__text {
+  white-space: nowrap;
+}
+
+.phone-number__icon {
+  flex-shrink: 0;
+}
+
 .phone-number__icon-elem {
   width: 0.66667rem;
   height: 0.66667rem;
@@ -259,10 +406,35 @@ img {
   fill: #fff;
 }
 
+.phone-number__icon-elem--theme--green {
+  fill: #365a49;
+}
+
 @media screen and (max-width: 768px) {
   .phone-number__tablets {
     display: none;
   }
+}
+
+.hamburger {
+  width: 24px;
+  height: 20px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+.hamburger__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
 }
 
 .features {
@@ -360,12 +532,24 @@ img {
   color: #000;
 }
 
+@media screen and (max-width: 480px) {
+  .section__title {
+    margin-bottom: 1.88889rem;
+  }
+}
+
 .headline {
   text-align: center;
 }
 
 .headline__title {
   margin-bottom: 1.38889rem;
+}
+
+@media screen and (max-width: 480px) {
+  .headline__title {
+    margin-bottom: 1.11111rem;
+  }
 }
 
 .headline__subtitle {
@@ -375,13 +559,28 @@ img {
 
 @media screen and (max-width: 768px) {
   .headline__subtitle {
-    padding: 0 22%;
+    padding: 0 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .headline__subtitle {
+    font-size: 18px;
+    padding: 0;
+    margin-bottom: 2.94444rem;
   }
 }
 
 .benefits {
   display: flex;
   margin-bottom: 6.66667rem;
+}
+
+@media screen and (max-width: 480px) {
+  .benefits {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
 }
 
 .benefits__item {
@@ -398,6 +597,12 @@ img {
   transform: translateX(50%);
 }
 
+@media screen and (max-width: 768px) {
+  .benefits__item:before {
+    content: none;
+  }
+}
+
 .benefits__item:first-child {
   padding-left: 0;
 }
@@ -410,8 +615,22 @@ img {
   display: none;
 }
 
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    display: flex;
+    padding: 0;
+    margin-bottom: 2.22222rem;
+  }
+}
+
 .benefit {
   text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__image {
+    margin-right: 0.77778rem;
+  }
 }
 
 .benefit__image-wrapper {
@@ -438,14 +657,32 @@ img {
   filter: brightness(0) saturate(100%);
 }
 
+@media screen and (max-width: 480px) {
+  .benefit__text {
+    text-align: left;
+  }
+}
+
 .benefit__text h3 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.38889rem;
 }
 
+@media screen and (max-width: 480px) {
+  .benefit__text h3 {
+    margin-bottom: 1.5rem;
+  }
+}
+
 .benefit__description {
   font-weight: 200;
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__description {
+    font-size: 1rem;
+  }
 }
 
 .section-why {
@@ -462,7 +699,17 @@ img {
 
 @media screen and (max-width: 768px) {
   .section-why {
-    background: url("../img/decor/grey-leaf-left.png") left top 3% no-repeat;
+    background-position: left top 10%;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-why {
+    background: none;
+  }
+  .section-why:before {
+    content: none;
   }
 }
 
@@ -485,6 +732,12 @@ img {
   left: 50%;
   transform: translateX(-50%);
   top: -3.61111rem;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__display-inner {
+    padding: 2.77778rem 0 0;
+  }
 }
 
 .reviews__list-item {
@@ -510,6 +763,8 @@ img {
 @media screen and (max-width: 768px) {
   .reviews__avatar {
     margin-bottom: 1.38889rem;
+    width: 7.22222rem;
+    height: 7.22222rem;
   }
 }
 
@@ -551,6 +806,12 @@ img {
 @media screen and (max-width: 768px) {
   .reviews__text {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    font-size: 1rem;
   }
 }
 
@@ -607,6 +868,7 @@ img {
   content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
   position: absolute;
   bottom: -8.88889rem;
+  z-index: 160;
 }
 
 .section-reviews:after {
@@ -614,6 +876,17 @@ img {
   position: absolute;
   top: 0.83333rem;
   right: 0.55556rem;
+}
+
+@media screen and (max-width: 480px) {
+  .section-reviews:before {
+    left: -7%;
+    bottom: -24%;
+  }
+  .section-reviews:after {
+    top: 0;
+    right: -6%;
+  }
 }
 
 .fixed-menu {
@@ -666,6 +939,12 @@ img {
   .form {
     padding: 0 19%;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
   }
 }
 
@@ -732,6 +1011,12 @@ img {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 480px) {
+  .form__controls {
+    justify-content: center;
+  }
+}
+
 .form__btns {
   margin-top: 2.22222rem;
 }
@@ -739,6 +1024,12 @@ img {
 @media screen and (max-width: 768px) {
   .form__btns {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form__btns {
+    margin-top: 1.94444rem;
   }
 }
 
@@ -756,6 +1047,16 @@ img {
 
 .radio--checkbox .radio__visible:before {
   content: none;
+}
+
+.radio:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .radio {
+    margin-right: 0.55556rem;
+  }
 }
 
 .radio__elem {
@@ -803,6 +1104,12 @@ img {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 480px) {
+  .radio__title {
+    line-height: 1.42;
+  }
+}
+
 .section-order {
   position: relative;
   background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
@@ -829,5 +1136,86 @@ img {
   .section-order:after {
     content: "";
   }
+}
+
+.section-map {
+  position: relative;
+  background-image: url("../img/decor/map-map-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5.11111rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 5.55556rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 8.33333rem;
+  }
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .container-footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.16667rem;
+  font-style: inherit;
+  color: #000;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__contacts {
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__items {
+  margin-right: 1.11111rem;
+}
+
+.social__items:last-child {
+  margin-right: 0;
+}
+
+.social__icons {
+  width: 1.11111rem;
+  height: 1.11111rem;
+  fill: #b2b2b2;
+}
+
+.social__icons:hover {
+  fill: #000;
 }
 /*# sourceMappingURL=main.css.map */
