@@ -5,13 +5,13 @@
 .section-reviews:before {
   content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
   position: absolute;
-  bottom: -160px;
+  bottom: rem(-160px);
 }
 
 .section-reviews:after {
   content: url("../img/decor/reviews-berries-right.png");
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: rem(15px);
+  right: rem(10px);
 }
 /*# sourceMappingURL=section-reviews.css.map */

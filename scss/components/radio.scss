@@ -2,19 +2,25 @@
   display: flex;
   cursor: pointer;
   user-select: none;
-  margin-bottom: 9px;
-  margin-right: 25px;
+  margin-bottom: rem(9px);
+  margin-right: rem(25px);
 
   &--checkbox {
     .radio__visible {
       border-radius: 0;
 
       &:before {
-        background: url("../img/icons/checkmark.svg") center center no-repeat;
-        filter: invert(30%) sepia(19%) saturate(884%) hue-rotate(99deg) brightness(86%) contrast(80%);
+        content: none;
       }
-
     }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include phones {
+    margin-right: rem(10px);
   }
 }
 
@@ -26,20 +32,35 @@
       display: block;
     }
   }
+
+  &:checked ~ .radio__visible .radio__visible-icon{
+    display: block;
+  }
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: rem(26px);
+  height: rem(26px);
   position: relative;
   border-radius: 50%;
   background: #fff;
-  margin-right: 10px;
+  margin-right: rem(10px);
+
+  &-icon {
+    width: 0.77778rem;
+    height: 0.77778rem;
+    fill: #365a49;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
 
   &:before {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     background: #365a49;
     border-radius: 50%;
     display: none;
@@ -48,5 +69,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
 
+.radio__title {
+  
+  @include phones {
+    line-height: 1.42;
+  }
 }

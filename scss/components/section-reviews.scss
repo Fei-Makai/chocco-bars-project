@@ -4,13 +4,29 @@
   &:before {
     content: url("../img/decor/reviews-leaf-berries-bottom-left.png");
     position: absolute;
-    bottom: -160px;
+    bottom: rem(-160px);
+    z-index: $z-reviews-before-img;
   }
 
   &:after {
     content: url("../img/decor/reviews-berries-right.png");
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: rem(15px);
+    right: rem(10px);
+  }
+
+  @include phones {
+
+    &:before {
+      transform: scale(0.7);
+      left: -10%;
+      bottom: -25%;
+    }
+
+    &:after {
+      transform: scale(0.7);
+      top: -3%;
+      right: -15%;
+    }
   }
 }

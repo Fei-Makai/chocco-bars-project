@@ -1,29 +1,77 @@
 .banner {
-  background: url("../img/decor/banner-berries-middle-right.png") right 35% bottom 3% no-repeat, url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
+  background: url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: $blue;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   color: #fff;
-  padding: 24px 0 45px;
+  padding: rem(24px) 0 rem(45px);
   position: relative;
 
   &:before {
     position: absolute;
-    bottom: -48px;
+    bottom: rem(-48px);
     left: 2%;
     content: url("../img/decor/banner-leaf-bottom-left.png");
+
+    @include tablets {
+      position: absolute;
+      left: 30%;
+      top: 17vh;
+      transform: scale(0.5);
+      z-index: $z-banner-before-img;
+      content: url("../img/decor/banner-leaf-bottom-left.png")
+    } 
+
+    @include phones {
+      content: none;
+    } 
   }
+
   &:after {
     position: absolute;
-    bottom: -55px;
+    bottom: rem(-55px);
     right: 10%;
     content: url("../img/decor/banner-leaves-berries-bottom-right.png");
+
+    @include tablets {
+      right: 18vw;
+      top: 21vh;
+      transform: scale(0.5);
+    }
+
+    @include phones {
+      content: none;
+    }
+  }
+
+  @include tablets {
+    background-position: right top 10%;
+    background-repeat: no-repeat;
+  }
+
+  @include phones {
+    background-position: right top 17%;
+    background-repeat: no-repeat;
+    background-size: 65%;
   }
 } 
 
 .banner__title-section {
   width: 100%;
-  margin-top: 120px;
+  margin-top: rem(120px);
+
+  @include tablets {
+    text-align: center;
+    margin-top: rem(28px);
+  }
+
+  @include phones {
+    margin-top: rem(23px);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1;
+  }
 }
 
 .banner__container {
@@ -31,11 +79,29 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+
+  @include tablets {
+    justify-content: normal;
+  }
+
+  @include phones {
+    justify-content: space-between;
+  }
 }
 
 .banner__main-content {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column-reverse;
+    margin-top: 10vh;
+  }
+
+  @include phones {
+    margin-top: 0;
+    margin-bottom: 20%;
+  }
 }
 
 .banner__col {
@@ -43,33 +109,96 @@
 }
 
 .banner__main-title {
-  font-size: 48px;
+  font-size: rem(48px);
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   text-transform: uppercase;
+
+  @include phones {
+    font-size: rem(40px);
+  }
 }
 
 .banner__title-description {
-  font-size: 21px;
-  margin-bottom: 50px;
+  font-size: rem(21px);
+  margin-bottom: rem(50px);
   padding-right: 10%;
+
+  @include tablets {
+    padding: 0 20%;
+  }
+
+  @include phones {
+    padding: 0 5%;
+    font-size: rem(18px);
+  }
 }
 
 .banner__image {
   height: 100%;
   width: 100%;
   position: relative;
-  margin-bottom: -120px;
+  margin-bottom: rem(-120px);
+
+  &:before {
+    position: absolute;
+    bottom: -10%;
+    right: 40%;
+    content: url("../img/decor/banner-berries-middle-right.png");
+
+    @include tablets {
+      bottom: -5%;
+      right: 35%;
+      transform: rotateZ(70deg) scale(0.6);
+    }
+
+    @include phones {
+      bottom: -15%;
+      left: 10%;
+      transform: scale(0.7);
+      content: url("../img/decor/banner-leaves-berries-mobile.png");
+    }
+  }  
 
   &:after {
     position: absolute;
     bottom: 5%;
     right: -5%;
     content: url("../img/decor/banner-leaves-middle-right.png");
+
+    @include tablets {
+      bottom: 1%;
+      right: 10%;
+      transform: scale(0.5);
+    }
+
+    @include phones {
+      content: none;
+    }
+  }
+
+  @include tablets {
+    margin-bottom: 0;
+
+    &--img {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  @include phones {
+    
+    &--img {
+      width: 70%;
+    }
   }
 }
 
 .banner__icons-section {
-  margin-top: 75px;
+  margin-top: rem(75px);
+
+  @include tablets {
+    display: none;
+  }
 }

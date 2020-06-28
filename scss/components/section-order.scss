@@ -1,18 +1,29 @@
 .section-order {
   position: relative;
   background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
+  background-size: cover;
 
   &:before {
     content: url("../img/decor/order-berry-left.png");
     position: absolute;
-    bottom: 80px;
-    left: 18px;
+    bottom: rem(80px);
+    left: rem(18px);
   }
 
   &:after {
     content: url("../img/decor/order-leaf-right.png");
     position: absolute;
-    bottom: 80px;
-    right: 2px;
+    bottom: rem(80px);
+    right: rem(2px);
+  }
+
+  @include tablets {
+    &:before {
+      content: "";
+    }
+  
+    &:after {
+      content: "";
+    }
   }
 }
