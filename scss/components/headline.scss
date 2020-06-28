@@ -4,6 +4,7 @@
 
 .headline__title {
   margin-bottom: rem(25px);
+  white-space: nowrap;
 
   @include phones {
     margin-bottom: rem(20px);
@@ -19,8 +20,8 @@
   }
 
   @include tablets {
-    font-size: $baseFontSize;
+    font-size: rem(18px);
     padding: 0;
-    margin-bottom: rem(53px);
+    margin-bottom: 10%;
   }
 }

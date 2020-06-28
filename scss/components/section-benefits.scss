@@ -41,5 +41,9 @@
     display: flex;
     padding: 0;
     margin-bottom: rem(40px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }  
   }
 }

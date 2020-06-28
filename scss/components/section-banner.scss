@@ -23,8 +23,7 @@
     } 
 
     @include phones {
-      left: 14%;
-      top: 18vh;
+      content: none;
     } 
   }
 
@@ -41,8 +40,7 @@
     }
 
     @include phones {
-      right: 0vw;
-      top: 28vh;
+      content: none;
     }
   }
 
@@ -85,6 +83,10 @@
   @include tablets {
     justify-content: normal;
   }
+
+  @include phones {
+    justify-content: space-between;
+  }
 }
 
 .banner__main-content {
@@ -98,6 +100,7 @@
 
   @include phones {
     margin-top: 0;
+    margin-bottom: 20%;
   }
 }
 
@@ -127,7 +130,7 @@
   }
 
   @include phones {
-    padding: 0 13%;
+    padding: 0 5%;
     font-size: rem(18px);
   }
 }
@@ -151,9 +154,10 @@
     }
 
     @include phones {
-      bottom: 10%;
-      left: 15%;
-      transform: rotateZ(75deg) scale(0.7);
+      bottom: -15%;
+      left: 10%;
+      transform: scale(0.7);
+      content: url("../img/decor/banner-leaves-berries-mobile.png");
     }
   }  
 
@@ -170,8 +174,7 @@
     }
 
     @include phones {
-      bottom: 13%;
-      right: 0;
+      content: none;
     }
   }
 
@@ -182,10 +185,6 @@
       width: 50%;
       margin: 0 auto;
     }
-  }
-
-  @include tablets {
-    margin-top: rem(35px);
   }
 
   @include phones {

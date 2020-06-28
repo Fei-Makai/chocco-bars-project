@@ -18,13 +18,15 @@
   @include phones {
 
     &:before {
-      left: -7%;
-      bottom: -24%;
+      transform: scale(0.7);
+      left: -10%;
+      bottom: -25%;
     }
 
     &:after {
-      top: 0;
-      right: -6%;
+      transform: scale(0.7);
+      top: -3%;
+      right: -15%;
     }
   }
 }

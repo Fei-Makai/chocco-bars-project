@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
 html {
   font-size: 18px;
+  height: -webkit-fill-available;
 }
 
 @media screen and (max-width: 768px) {
@@ -18,10 +19,12 @@ html {
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
@@ -126,8 +129,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner:before {
-    left: 14%;
-    top: 18vh;
+    content: none;
   }
 }
 
@@ -148,8 +150,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner:after {
-    right: 0vw;
-    top: 28vh;
+    content: none;
   }
 }
 
@@ -203,6 +204,12 @@ img {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .banner__container {
+    justify-content: space-between;
+  }
+}
+
 .banner__main-content {
   display: flex;
   align-items: center;
@@ -218,6 +225,7 @@ img {
 @media screen and (max-width: 480px) {
   .banner__main-content {
     margin-top: 0;
+    margin-bottom: 20%;
   }
 }
 
@@ -253,7 +261,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner__title-description {
-    padding: 0 13%;
+    padding: 0 5%;
     font-size: 1rem;
   }
 }
@@ -282,9 +290,10 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner__image:before {
-    bottom: 10%;
-    left: 15%;
-    transform: rotateZ(75deg) scale(0.7);
+    bottom: -15%;
+    left: 10%;
+    transform: scale(0.7);
+    content: url("../img/decor/banner-leaves-berries-mobile.png");
   }
 }
 
@@ -305,8 +314,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner__image:after {
-    bottom: 13%;
-    right: 0;
+    content: none;
   }
 }
 
@@ -317,12 +325,6 @@ img {
   .banner__image--img {
     width: 50%;
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .banner__image {
-    margin-top: 1.94444rem;
   }
 }
 
@@ -373,6 +375,10 @@ img {
 
 .menu__item:last-child {
   margin-right: 0;
+}
+
+.menu__item:hover {
+  text-decoration: underline;
 }
 
 .menu__link {
@@ -534,7 +540,8 @@ img {
 
 @media screen and (max-width: 480px) {
   .section__title {
-    margin-bottom: 1.88889rem;
+    margin-bottom: 5%;
+    font-size: 12vw;
   }
 }
 
@@ -544,6 +551,7 @@ img {
 
 .headline__title {
   margin-bottom: 1.38889rem;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 480px) {
@@ -565,9 +573,9 @@ img {
 
 @media screen and (max-width: 768px) {
   .headline__subtitle {
-    font-size: 18px;
+    font-size: 1rem;
     padding: 0;
-    margin-bottom: 2.94444rem;
+    margin-bottom: 10%;
   }
 }
 
@@ -621,6 +629,9 @@ img {
     padding: 0;
     margin-bottom: 2.22222rem;
   }
+  .benefits__item:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .benefit {
@@ -671,7 +682,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .benefit__text h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 5%;
   }
 }
 
@@ -779,12 +790,6 @@ img {
   margin-left: 1.11111rem;
 }
 
-@media screen and (max-width: 768px) {
-  .reviews__content {
-    text-align: center;
-  }
-}
-
 .reviews__content h3 {
   font-size: 1.66667rem;
   font-weight: bold;
@@ -796,6 +801,18 @@ img {
   font-size: 18px;
   font-weight: bold;
   color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reviews__content {
+    margin-left: 0;
+  }
 }
 
 .reviews__text {
@@ -812,6 +829,7 @@ img {
 @media screen and (max-width: 480px) {
   .reviews__text {
     font-size: 1rem;
+    margin-bottom: 5%;
   }
 }
 
@@ -842,6 +860,13 @@ img {
 
 .interactive-avatar--active {
   border-color: #0f5a47;
+}
+
+@media screen and (max-width: 480px) {
+  .interactive-avatar {
+    width: 3.11111rem;
+    height: 3.11111rem;
+  }
 }
 
 .interactive-avatar__link {
@@ -880,12 +905,14 @@ img {
 
 @media screen and (max-width: 480px) {
   .section-reviews:before {
-    left: -7%;
-    bottom: -24%;
+    transform: scale(0.7);
+    left: -10%;
+    bottom: -25%;
   }
   .section-reviews:after {
-    top: 0;
-    right: -6%;
+    transform: scale(0.7);
+    top: -3%;
+    right: -15%;
   }
 }
 
@@ -1029,7 +1056,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .form__btns {
-    margin-top: 1.94444rem;
+    margin-top: 5%;
   }
 }
 
@@ -1113,6 +1140,7 @@ img {
 .section-order {
   position: relative;
   background: #d2ddd9 url("../img/decor/berry-pattern.png") center center no-repeat;
+  background-size: cover;
 }
 
 .section-order:before {

@@ -23,6 +23,7 @@
   color: #000;
 
   @include phones {
-    margin-bottom: rem(34px);
+    margin-bottom: 5%;
+    font-size: 12vw;
   }
 }
