@@ -1,0 +1,69 @@
+.overlay-menu {
+  position: fixed;
+  background-color: $blue;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  padding: rem(24px) 0 rem(45px);
+  display: none;
+  z-index: $z-index-overlay-menu;
+}
+
+.show-menu {
+  display: block;
+}
+
+.container-overlay-menu {
+  height: 100%;
+}
+
+.close-button {
+  width: 24px;
+  height: 20px;
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close-button__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+
+  &:nth-child(1) {
+    transform-origin: left;
+    transform: rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    transform-origin: left;
+    transform: rotate(-45deg);
+  }
+}
+
+.overlay-menu__list {
+  height: 100%;
+  width: 100%;
+  font-size: rem(45px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  @include phones {
+    font-size: rem(25px);
+  }
+}
+
+.overlay-menu__item {
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.overlay-menu__link {
+  text-decoration: none;
+}

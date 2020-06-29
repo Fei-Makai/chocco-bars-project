@@ -13,6 +13,7 @@ $darkGreen: #0b4d3c;
 $z-fixed-menu: 100;
 $z-banner-before-img: 150;
 $z-reviews-before-img: 160;
+$z-index-overlay-menu: 170;
 
 @import "media";
 
@@ -27,6 +28,7 @@ $z-reviews-before-img: 160;
 @import "components/section-banner";
 @import "components/header";
 @import "components/hamburger";
+@import "components/overlay-menu";
 @import "components/features";
 @import "components/feature";
 @import "components/btn";

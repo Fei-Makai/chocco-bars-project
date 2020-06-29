@@ -44,6 +44,10 @@
   display: flex;
   align-items: center;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   &--theme--green {
     color: #365a49;
   }

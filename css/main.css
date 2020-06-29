@@ -393,6 +393,10 @@ img {
   align-items: center;
 }
 
+.phone-number:hover {
+  text-decoration: underline;
+}
+
 .phone-number--theme--green {
   color: #365a49;
 }
@@ -441,6 +445,75 @@ img {
   background: #fff;
   height: 4px;
   border-radius: 10px;
+}
+
+.overlay-menu {
+  position: fixed;
+  background-color: #61c4d9;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  padding: 1.33333rem 0 2.5rem;
+  display: none;
+  z-index: 170;
+}
+
+.show-menu {
+  display: block;
+}
+
+.container-overlay-menu {
+  height: 100%;
+}
+
+.close-button {
+  width: 24px;
+  height: 20px;
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close-button__plank {
+  display: block;
+  background: #fff;
+  height: 4px;
+  border-radius: 10px;
+}
+
+.close-button__plank:nth-child(1) {
+  transform-origin: left;
+  transform: rotate(45deg);
+}
+
+.close-button__plank:nth-child(2) {
+  transform-origin: left;
+  transform: rotate(-45deg);
+}
+
+.overlay-menu__list {
+  height: 100%;
+  width: 100%;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .overlay-menu__list {
+    font-size: 1.38889rem;
+  }
+}
+
+.overlay-menu__item:hover {
+  text-decoration: underline;
+}
+
+.overlay-menu__link {
+  text-decoration: none;
 }
 
 .features {
