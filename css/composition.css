@@ -1,0 +1,14 @@
+.composition-slider__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.composition-slider__col {
+  flex: 1;
+}
+
+.composition__icon-image-wrapper {
+  width: rem(90px);
+  height: rem(90px);
+}
+/*# sourceMappingURL=composition.css.map */

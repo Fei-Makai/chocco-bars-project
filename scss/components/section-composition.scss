@@ -1,0 +1,81 @@
+.section-composition {
+  background-color: #f8faf9;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    bottom: -33%;
+    right: 0;
+    content: url("../img/decor/composition-berries-leaf-right-bottom.png");
+  }
+
+  @include tablets {
+
+    &:before {
+      bottom: -20%;
+      right: 0;
+    }
+  }
+
+  @include phones {
+
+    &:before {
+      bottom: -31%;
+      right: -15%;
+      transform: scale(0.7);
+    }
+  }
+}
+
+.arrow-next, .arrow-prev {
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+  z-index: $z-index-slider-arrows;
+
+  @include tablets {
+    top: 38%;
+  }
+}
+
+.arrow-prev {
+  left: 5%;
+  transform: rotate(180deg);
+
+  @include tablets {
+    left: 10%;
+  }
+
+  @include phones {
+    left: 1%;
+  }
+}
+
+.arrow-next {
+  right: 5%;
+
+  @include tablets {
+    right: 10%;
+  }
+
+  @include phones {
+    right: 1%;
+  }
+}
+
+.arrow-wrapper {
+  width: rem(40px);
+  height: rem(40px);
+  position: relative;
+  overflow: hidden;   
+}
+
+.arrow-icon {
+  width: rem(15px);
+  height: rem(30px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #151515;
+}

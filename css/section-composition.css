@@ -1,0 +1,36 @@
+.section-composition {
+  background-color: #f8faf9;
+}
+
+.arrow-next, .arrow-prev {
+  cursor: pointer;
+  position: absolute;
+  user-select: none;
+}
+
+.arrow-prev {
+  left: 2.5%;
+  transform: rotate(180deg);
+}
+
+.arrow-next {
+  right: 2.5%;
+}
+
+.arrow-wrapper {
+  width: rem(40px);
+  height: rem(40px);
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow-icon {
+  width: rem(15px);
+  height: rem(30px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #151515;
+}
+/*# sourceMappingURL=section-composition.css.map */

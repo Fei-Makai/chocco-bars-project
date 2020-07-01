@@ -14,6 +14,9 @@ $z-fixed-menu: 100;
 $z-banner-before-img: 150;
 $z-reviews-before-img: 160;
 $z-index-overlay-menu: 170;
+$z-index-slider-arrows: 180;
+$z-index-pop-up-composition: 190;
+$z-index-section-why-before: 200;
 
 @import "media";
 
@@ -46,3 +49,6 @@ $z-index-overlay-menu: 170;
 @import "components/section-order";
 @import "components/section-map";
 @import "components/footer";
+@import "components/composition";
+@import "components/section-composition";
+@import "components/composition-pop-up";
