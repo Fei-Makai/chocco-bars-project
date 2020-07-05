@@ -1,0 +1,209 @@
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }  
+}
+
+.slider__col {
+  flex: 1;
+}
+
+.composition-image-wrapper {
+  display: block;
+  float: right;
+  margin-top: rem(40px);
+
+  @include tablets {
+    margin-top: 0;
+    margin-bottom: rem(40px);
+  }
+
+  @include tablets {
+    margin-bottom: rem(25px);
+  }
+}
+
+.composition__image {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    bottom: -5%;
+    left: -10%;
+    content: url("../img/decor/composition-leaves.png");
+  }
+
+  @include tablets {
+
+    &:before {
+      bottom: -10%;
+      left: -15%;
+      transform: scale(0.9);
+    }
+  }
+
+  @include phones {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:before {
+      bottom: -20%;
+      left: -35%;
+      transform: scale(0.7);
+    }
+  }
+}
+
+.composition-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: rem(70px);
+  line-height: 1.3;
+
+  @include tablets {
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  @include phones {
+    line-height: 1;
+  }
+}
+
+.bars-composition {
+  display: flex;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.composition__icon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: rem(90px);
+  height: rem(90px);
+  border-radius: 4px;
+  margin-bottom: rem(30px);
+  background-color: $blue;
+  color: #fff;
+
+  &-image {
+    width: rem(53px);
+    height: rem(53px);
+    margin-bottom: rem(7px);
+    fill: #fff;
+  }
+
+  &-text {
+    font-size: rem(14px);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.composition__description {
+
+  & h1 {
+    font-size: rem(36px);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+
+    @include tablets {
+      margin-bottom: rem(15px);
+    }
+  }
+}
+
+.composition__title-description {
+  margin-bottom: rem(35px);
+
+  @include tablets {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem(15px);
+  }
+
+  @include phones {
+    width: 90%;
+  }
+}
+
+.details__row {
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.upper-row {
+  margin-bottom: rem(10px);
+
+  @include phones {
+    margin-bottom: rem(20px);
+  }
+}
+
+.details__block {
+
+  & h5 {
+    font-size: rem(18px);
+    margin-bottom: 0;
+  }
+
+  & p {
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+.block-left {
+  flex: 0.4;
+
+  @include tablets {
+    flex: none;
+    text-align: left;
+    margin-right: rem(70px);
+  }
+}
+
+.block-right {
+  flex: 0.6;
+
+  @include tablets {
+    flex: none;
+    text-align: left;
+  }
+}
+
+.details__block-price {
+
+  & span {
+    font-size: rem(60px);
+    font-weight: lighter;
+    color: #151515;
+  }
+}
+
+.rub-symbol {
+  width: rem(23px);
+  height: rem(33px);
+  padding-top: rem(5px);
+}

@@ -1,0 +1,60 @@
+.composition-pop-up {
+  display: none;
+  position: absolute;
+  margin-left: rem(90px);
+  max-width: 270px;
+  background-color: #fff;
+  border-radius: 4px;
+  z-index: $z-index-pop-up-composition;
+}
+
+.show-pop-up {
+  display: block;
+}
+
+.composition-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: rem(10px);
+}
+
+.composition-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem(5px);
+  color: #333;
+  font-size: rem(14px);
+}
+
+.composition-item__icon-wrap {
+  flex: 0.5;
+  position: relative;
+  width: rem(50px);
+  height: rem(50px);
+  margin-right: rem(18px);
+  overflow: hidden;
+}
+
+.composition-item__icon {
+  width: rem(40px);
+  height: rem(40px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #1b1b1b;
+}
+
+.composition-item__title {
+  flex: 1;
+  margin-right: rem(18px);
+  white-space: nowrap;
+}
+
+.composition-item__weight {
+  flex: 0.2;
+  text-align: right;
+  white-space: nowrap;
+}
