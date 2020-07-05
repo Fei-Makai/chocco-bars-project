@@ -1,9 +1,24 @@
-const popUp = document.getElementById('composition-pop-up-button');
+const popUp = document.querySelector('#composition-pop-up');
+const popUpIcon = document.querySelector('#composition__icon-button');
+const popUpList = document.querySelector('#composition-list');
 
-document.getElementById('composition__icon-button').addEventListener('click', function() {
-    if (popUp.classList.contains('show-pop-up')) {
+popUpIcon.addEventListener('mouseenter', e => {
+    popUp.classList.add('show-pop-up');
+    popUpIcon.style.boxShadow = "0 0 11px #61c4d9";
+});
+
+popUpIcon.addEventListener('mouseleave', e => {
+    if (e.relatedTarget != popUpList) {
         popUp.classList.remove('show-pop-up');
-    } else {
-        popUp.classList.add('show-pop-up');
+        popUpIcon.style.removeProperty('box-shadow');
+    } else if (e.relatedTarget == popUpList) {
+        popUpIcon.style.boxShadow = "0 0 11px #61c4d9";
     }
 });
+
+popUpList.addEventListener('mouseleave', e => {
+    if (e.relatedTarget != popUpIcon) {
+        popUp.classList.remove('show-pop-up');
+        popUpIcon.style.removeProperty('box-shadow');
+    }
+})

@@ -30,6 +30,7 @@
 .arrow-next, .arrow-prev {
   cursor: pointer;
   position: absolute;
+  top: 50%;
   user-select: none;
   z-index: $z-index-slider-arrows;
 
@@ -39,7 +40,7 @@
 }
 
 .arrow-prev {
-  left: 5%;
+  left: -2.5%;
   transform: rotate(180deg);
 
   @include tablets {
@@ -52,7 +53,7 @@
 }
 
 .arrow-next {
-  right: 5%;
+  right: -2.5%;
 
   @include tablets {
     right: 10%;

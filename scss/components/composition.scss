@@ -1,4 +1,8 @@
-.composition-slider__item {
+.slider__item {
+  display: none;
+}
+
+.slider__item--active {
   display: flex;
   justify-content: space-between;
 
@@ -8,7 +12,7 @@
   }  
 }
 
-.composition-slider__col {
+.slider__col {
   flex: 1;
 }
 
@@ -96,10 +100,6 @@
   margin-bottom: rem(30px);
   background-color: $blue;
   color: #fff;
-
-  &:hover {
-    box-shadow: 0 0 11px rgb(97, 196, 217); 
-  }
 
   &-image {
     width: rem(53px);
