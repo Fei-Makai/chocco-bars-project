@@ -1702,4 +1702,147 @@ img {
   text-align: right;
   white-space: nowrap;
 }
+
+.team-intro__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .team-intro__list {
+    flex-direction: column;
+  }
+}
+
+.team-intro__item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0.83333rem;
+}
+
+.team-intro__item:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .team-intro__item {
+    margin-right: 0;
+  }
+}
+
+.team-member__image {
+  margin-bottom: 1.11111rem;
+}
+
+@media screen and (max-width: 768px) {
+  .team-member__image {
+    display: none;
+    order: 2;
+    margin-bottom: 1.38889rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-member__image {
+    width: 40%;
+  }
+}
+
+.team-member__name {
+  display: flex;
+  align-items: baseline;
+}
+
+.team-member__name h3 {
+  color: #000;
+  font-size: 1.16667rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .team-member__name {
+    order: 1;
+    margin-bottom: 1.11111rem;
+  }
+}
+
+.triangular__icon {
+  transform: rotate(90deg);
+  height: 9px;
+  width: 6px;
+  fill: #0b4d3c;
+}
+
+.team-member__position {
+  position: absolute;
+  top: 100%;
+  margin-top: 0.83333rem;
+  text-align: center;
+  height: 0;
+  width: 120%;
+  overflow: hidden;
+}
+
+.team-member__position--active {
+  height: auto;
+}
+
+.team-member__position h4 {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 0.55556rem;
+}
+
+.team-member__position p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+  .team-member__position {
+    order: 3;
+    position: relative;
+    margin: 0;
+    width: 40%;
+  }
+  .team-member__position p {
+    padding-bottom: 1.38889rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-member__position {
+    width: 80%;
+  }
+}
+
+.section-team {
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .section-team {
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-team {
+    top: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-team {
+    top: 10vh;
+  }
+}
 /*# sourceMappingURL=main.css.map */
