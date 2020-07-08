@@ -23,6 +23,11 @@
   }
 }
 
+.reviews__list {
+  position: relative;
+  min-height: rem(280px);
+}
+
 .reviews__list-item {
   display: none;
 

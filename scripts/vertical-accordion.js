@@ -2,11 +2,9 @@ const memberName = document.querySelectorAll('.team-member__name');
 const firstMember = document.querySelector('#first-member');
 const positionActive = 'team-member__position--active';
 
-console.log(window.innerWidth);
-
 if(window.innerWidth < 769) {
     firstMember.classList.add(positionActive);
-}
+};
 
 memberName.forEach(item => {
     item.addEventListener('click', function() {
@@ -26,6 +24,6 @@ memberName.forEach(item => {
             item.nextElementSibling.classList.add(positionActive);
             item.lastElementChild.style.transform = 'rotate(-90deg)';
             item.previousElementSibling.style.display = 'block';
-        }
+        };
     });
 });
