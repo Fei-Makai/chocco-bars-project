@@ -1,0 +1,41 @@
+.section-team {
+  position: relative;
+
+  @include tablets {
+    justify-content: start;
+  }
+ 
+  // background: url("../img/decor/grey-leaf-left.png") left top 57% no-repeat;
+
+  // &:before {
+  //   content: url("../img/decor/bars-with-raspberry.png");
+  //   position: absolute;
+  //   bottom: rem(-130px);
+  //   left: 0;
+  //   z-index: $z-index-section-why-before;
+  // }
+
+  // @include tablets {
+  //   background-position: left top 10%;
+  //   background-repeat: no-repeat;
+  // }
+
+  // @include phones {
+  //   background: none;
+
+  //   &:before {
+  //     content: none;
+  //   }
+  // }
+}
+
+.container-team {
+
+  @include tablets {
+    top: 20vh;
+  }
+
+  @include phones {
+    top: 10vh;
+  }
+}

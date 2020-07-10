@@ -1,8 +1,13 @@
-.slider__item {
-  display: none;
+// .slider__item {
+//   display: none;
+// }
+.bx-wrapper {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
 }
-
-.slider__item--active {
+ 
+.slider__item {
   display: flex;
   justify-content: space-between;
 
