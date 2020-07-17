@@ -1,12 +1,32 @@
+// .section-player {
+
+//   @include phones {
+//     justify-content: start;
+//   }
+// }
+
+// .section-player .section__title {
+
+//   @include phones {
+//     margin-top: 10%;
+//     margin-bottom: 10%;
+//   }
+// }
+
 .player-section__container {
-  width: rem(660px);
-  height: rem(405px);
+  width: 660px;
+  height: 405px;
   margin-left: auto;
   margin-right: auto;
+
+  @include phones {
+    width: 80vw;
+    height: playerHeightVW(80vw);
+  }
 }
 
 .player {
-  position: relative;
+  position: relative; 
   display: block;
   width: 100%;
   height: 100%;
@@ -17,12 +37,9 @@
 
   &.paused {
     .player__start {
-      width: 14px;
-      height: 22px;
-      border: none;
 
       &:after,
-      &::before {
+      &:before {
         content: "";
         display: block;
         position: absolute;
@@ -33,14 +50,41 @@
       }
 
       &:after {
-        right: 0;
+        right: 15%;
       }
 
       &:before {
-        left: 0;
+        left: 15%;
+      }
+
+      &--play-icon {
+        display: none;
+      }
+
+      @include phones {
+        &:after,
+        &:before {
+          width: 3px;
+        }
+
+        &:after {
+          right: 25%;
+        }
+  
+        &:before {
+          left: 25%;
+        }
       }
     }
   }
+}
+
+.player__wrapper {
+  height: 100%;
+}
+
+.player__elem {
+  height: 100%;
 }
 
 .player__splash {
@@ -51,4 +95,164 @@
   bottom: 0;
   background: url(../img/decor/player-background.png) center center/cover no-repeat;
   cursor: pointer;
+
+  &--icon-wrapper {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: rem(140px);
+    height: rem(140px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s ease;
+    z-index: $z-player-playback-player-elem;
+
+    @include phones {
+      width: rem(90px);
+      height: rem(90px);
+    }
+  }
+  
+  &--play-icon {
+    position: absolute;
+    width: rem(82px);
+    height: rem(118px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #f2f2f2;
+
+    @include phones {
+      width: rem(50px);
+      height: rem(70px);
+    }
+  }
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(35px);
+  background: #3e3e3e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(25px);
+
+  @include phones {
+    height: rem(19px);
+    padding: 0 rem(10px);
+  }
+}
+
+.player__start {
+  position: relative;
+  width: rem(26px);
+  height: rem(26px);
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+
+  &--play-icon {
+    position: absolute;
+    width: rem(17px);
+    height: rem(24px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #626262;
+  }
+
+  @include phones {
+    width: rem(18px);
+    height: rem(18px);
+
+    &--play-icon {
+      width: rem(11px);
+      height: rem(15px);
+    }  
+  }
+}
+
+.player__playback {
+  width: 70%;
+  height: 4px;
+  position: relative;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 1px;
+
+  @include phones {
+    width: 65%;
+    height: 3px;
+  }
+
+  &-button {
+    position: absolute;
+    background: #626262;
+    border: 0;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    margin-top: -5px;
+    padding: 0;
+    left: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    outline: none;
+    z-index: $z-player-playback-playback-button;
+
+    @include phones {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      margin-top: -2px;
+    }
+  }
+
+  & span {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 10px;
+  }
+
+  &-bufferBar {
+    z-index: $z-player-playback-buffer-bar;
+    width: 0;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &-timeBar {
+    z-index: $z-player-playback-time-bar;
+    width: 0;
+    background: $blue;
+    box-shadow: 0 0 7px rgba(107, 204, 226, 0.5);
+  }
+}
+
+.player__duration {
+  width: 20%;
+
+  & span {
+    font-size: rem(18px);
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  @include phones {
+    width: 25%;
+
+    & span {
+      font-size: rem(12px);
+    }
+  }
 }

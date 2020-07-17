@@ -49,4 +49,49 @@
   background: url(../img/decor/player-background.png) center center/cover no-repeat;
   cursor: pointer;
 }
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: rem(35px);
+  background: #3e3e3e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(25px);
+}
+
+.player__playback {
+  width: 240px;
+  height: 7px;
+  position: relative;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 1px black;
+  border-radius: 10px;
+}
+
+.player__playback span {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.buffer-bar {
+  z-index: 5;
+  width: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.time-bar {
+  z-index: 10;
+  width: 8%;
+  background: -webkit-linear-gradient(top, #6bcce2 0%, #1da3d0 100%);
+  box-shadow: 0 0 7px rgba(107, 204, 226, 0.5);
+}
 /*# sourceMappingURL=section-player.css.map */
