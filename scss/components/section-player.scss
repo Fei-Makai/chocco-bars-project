@@ -166,7 +166,7 @@
 }
 
 .player__playback {
-  width: 65%;
+  width: 50%;
   height: 4px;
   position: relative;
   cursor: pointer;
@@ -174,7 +174,7 @@
   border-radius: 1px;
 
   @include phones {
-    width: 65%;
+    width: 40%;
     height: 3px;
   }
 
@@ -225,7 +225,9 @@
 }
 
 .player__duration {
-  width: 25%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
 
   & span {
     font-size: rem(18px);
@@ -234,7 +236,7 @@
   }
 
   @include phones {
-    width: 25%;
+    width: 20%;
 
     & span {
       font-size: rem(12px);
@@ -243,7 +245,7 @@
 }
 
 .player__volume {
-  width: 25%;
+  width: 20%;
   display: flex;
   justify-content: space-around;
   align-items: center;

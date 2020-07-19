@@ -102,6 +102,8 @@ video.ready(function() {
     let interval;
     const durationSec = video[0].duration;
 
+    $('.player__duration-estimate').text(formatTime(durationSec));
+
     if (typeof interval != 'undefined') {
         clearInterval(interval);
     }
