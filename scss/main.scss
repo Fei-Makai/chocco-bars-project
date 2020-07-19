@@ -10,6 +10,10 @@ $blue: #61c4d9;
 $darkGreen: #0b4d3c;
 
 //z-indexesa
+$z-player-playback-player-elem: 5;
+$z-player-playback-buffer-bar: 10;
+$z-player-playback-time-bar: 15;
+$z-player-playback-playback-button: 20;
 $z-fixed-menu: 100;
 $z-banner-before-img: 150;
 $z-reviews-before-img: 160;
@@ -31,6 +35,7 @@ $z-index-section-why-before: 200;
 @import "components/section-banner";
 @import "components/header";
 @import "components/hamburger";
+@import "components/btn-hamburger";
 @import "components/overlay-menu";
 @import "components/features";
 @import "components/feature";
@@ -55,3 +60,9 @@ $z-index-section-why-before: 200;
 @import "components/team";
 @import "components/section-team";
 @import "components/modal";
+@import "components/section-products-menu";
+@import "components/products-menu";
+@import "components/map";
+@import "components/section-player";
+
+

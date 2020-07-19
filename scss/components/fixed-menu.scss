@@ -3,19 +3,29 @@
   top: 35%;
   right: 3%;
   z-index: $z-fixed-menu;
+  color: #fff;
 
   @include tablets {
     display: none;
+  }
+
+  &--shadowed {
+    color: #3a77a7;
   }
 }
 
 .fixed-menu__item {
   margin-bottom: rem(5px);
 
-  &--active {
-    .fixed-menu__link {
-      border-color: #3a77a7;
-    }
+  &--active .fixed-menu__link {
+    border-color: #fff;
+  }
+}
+
+.fixed-menu--shadowed .fixed-menu__item {
+  
+  &--active .fixed-menu__link {
+    border-color: #3a77a7;
   }
 }
 
@@ -27,15 +37,25 @@
   display: block;
   position: relative;
 
+  &:hover {
+    border-color: #fff;
+  }
+
   &:before {
-    content: "";
+    content: "●";
+    font-size: rem(14px);
     width: rem(6px);
     height: rem(6px);
     border-radius: 50%;
-    background: #3a77a7;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 5%;
+    left: 40%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.fixed-menu--shadowed .fixed-menu__link {
+  &:hover {
+    border-color :#3a77a7;
   }
 }

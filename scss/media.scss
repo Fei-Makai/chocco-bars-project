@@ -2,6 +2,10 @@
   @return $px / $baseFontSize + 0rem;
 }
 
+@function playerHeightVW($vw) {
+  @return $vw / 1.63 + 0vw;
+}
+
 @mixin tablets {
   @media screen and (max-width: $tablets) {
     @content;
