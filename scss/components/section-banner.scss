@@ -1,7 +1,7 @@
 .banner {
   background: url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: $blue;
-  height: 100vh;
+  height: 100%;
   min-height: rem(650px);
   color: #fff;
   padding: rem(24px) 0 rem(45px);
@@ -50,6 +50,7 @@
   }
 
   @include phones {
+    min-height: 100%;
     background-position: right top 17%;
     background-repeat: no-repeat;
     background-size: 65%;

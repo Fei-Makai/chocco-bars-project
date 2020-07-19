@@ -109,7 +109,7 @@ img {
 .banner {
   background: url("../img/decor/banner-big-leaf.png") right bottom no-repeat;
   background-color: #61c4d9;
-  height: 100vh;
+  height: 100%;
   min-height: 36.11111rem;
   color: #fff;
   padding: 1.33333rem 0 2.5rem;
@@ -170,6 +170,7 @@ img {
 
 @media screen and (max-width: 480px) {
   .banner {
+    min-height: 100%;
     background-position: right top 17%;
     background-repeat: no-repeat;
     background-size: 65%;
@@ -656,7 +657,7 @@ img {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 36.11111rem;
   display: flex;
   flex-direction: column;
@@ -669,6 +670,12 @@ img {
 
 .section--font-color--green .section__title {
   color: inherit;
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    min-height: 100%;
+  }
 }
 
 .section__title {
@@ -2216,7 +2223,7 @@ input[type=number]::-webkit-outer-spin-button {
 .player__start {
   position: relative;
   width: 1.44444rem;
-  height: 1.44444rem;
+  height: 1.11111rem;
   background-color: transparent;
   border: none;
   -webkit-appearance: none;
@@ -2236,16 +2243,16 @@ input[type=number]::-webkit-outer-spin-button {
 @media screen and (max-width: 480px) {
   .player__start {
     width: 1rem;
-    height: 1rem;
+    height: 0.66667rem;
   }
   .player__start--play-icon {
-    width: 0.61111rem;
+    width: 0.55556rem;
     height: 0.83333rem;
   }
 }
 
 .player__playback {
-  width: 70%;
+  width: 65%;
   height: 4px;
   position: relative;
   cursor: pointer;
@@ -2308,7 +2315,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .player__duration {
-  width: 20%;
+  width: 25%;
 }
 
 .player__duration span {
@@ -2324,5 +2331,133 @@ input[type=number]::-webkit-outer-spin-button {
   .player__duration span {
     font-size: 0.66667rem;
   }
+}
+
+.player__volume {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player__volume.no-volume .player__volume-button:after {
+  display: block;
+}
+
+.player__volume-button {
+  position: relative;
+  width: 1.44444rem;
+  height: 1.44444rem;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.player__volume-button:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  left: 15px;
+  top: -1px;
+  bottom: 0;
+  background: #626262;
+  transform: rotate(50deg);
+  border: 1px solid #3e3e3e;
+}
+
+@media screen and (max-width: 480px) {
+  .player__volume-button {
+    width: 1rem;
+    height: 1rem;
+  }
+  .player__volume-button:after {
+    width: 1px;
+    height: 13px;
+    left: 8px;
+    top: 1px;
+  }
+}
+
+.player__volume-icon {
+  position: absolute;
+  width: 1.05556rem;
+  height: 1.33333rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #626262;
+}
+
+@media screen and (max-width: 480px) {
+  .player__volume-icon {
+    width: 0.5rem;
+    height: 0.83333rem;
+  }
+}
+
+.volume-level {
+  width: 60%;
+  height: 4px;
+  position: relative;
+  cursor: pointer;
+  background: #626262;
+  border-radius: 1px;
+}
+
+@media screen and (max-width: 480px) {
+  .volume-level {
+    width: 55%;
+    height: 3px;
+  }
+}
+
+.volume-level__button {
+  position: absolute;
+  background: #626262;
+  border: 0;
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  padding: 0;
+  left: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 20;
+}
+
+@media screen and (max-width: 480px) {
+  .volume-level__button {
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    margin-top: -2px;
+  }
+}
+
+.volume-level span {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 10px;
+}
+
+.volume-level__scale {
+  z-index: 10;
+  width: 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.volume-level__actual {
+  z-index: 15;
+  width: 0;
+  background: #61c4d9;
+  box-shadow: 0 0 7px rgba(107, 204, 226, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

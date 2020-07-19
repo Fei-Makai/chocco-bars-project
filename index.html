@@ -16,7 +16,7 @@
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">      
+    <div class="maincontent">  
 
       <section data-sidemenu-theme="white" data-section-id='banner' class="banner">
         <div class="container banner__container">
@@ -67,7 +67,7 @@
                 <h1 class="banner__main-title">Натуральные шоколадные батончики</h1>
                 <div class="banner__title-description">Наши батончики идеально подходят для тех, кто следит за своим
                   здоровьем</div>
-                <a href="#order-form" data-scroll-to="order" class="btn btn--theme-white">Заказать</a>
+                <a href="#" data-scroll-to="order" class="btn btn--theme-white">Заказать</a>
               </div>
             </div>
             <div class="banner__col">
@@ -282,7 +282,7 @@
                           </div>
                         </div>
                         <div class="details__block block-right">
-                          <a href="#order-form" class="btn btn--theme-green">Заказать</a>
+                          <a href="#" data-scroll-to="order" class="btn btn--theme-green">Заказать</a>
                         </div>
                       </div>
                     </div>
@@ -395,7 +395,7 @@
                           </div>
                         </div>
                         <div class="details__block block-right">
-                          <a href="#order-form" class="btn btn--theme-green">Заказать</a>
+                          <a href="#" data-scroll-to="order" class="btn btn--theme-green">Заказать</a>
                         </div>
                       </div>
                     </div>
@@ -664,10 +664,17 @@
                   <span class="player__playback-bufferBar"></span>
                   <span class="player__playback-timeBar"></span>
                 </div>
-                <div class="player__duration">
-                  <span class="player__duration-completed">00:00</span> 
-                  <span>/</span>
-                  <span class="player__duration-estimate">00:00</span>
+                <div class="player__volume">
+                  <button class="player__volume-button">
+                    <svg class="player__volume-icon">
+                      <use xlink:href="./img/icons/sprite.svg#volume"></use>
+                    </svg>
+                  </button>
+                  <div class="volume-level">
+                    <button class="volume-level__button"></button>
+                    <span class="volume-level__scale"></span>
+                    <span class="volume-level__actual"></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -829,25 +836,25 @@
       </a>
       <ul id="overlay-list" class="overlay-menu__list">
         <li class="overlay-menu__item">
-          <a href="#" class="overlay-menu__link">О нас</a>
+          <a href="#" data-scroll-to="why" class="overlay-menu__link">О нас</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#" class="overlay-menu__link">Батончики</a>
+          <a href="#" data-scroll-to="composition" class="overlay-menu__link">Батончики</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#" class="overlay-menu__link">Команда</a>
+          <a href="#" data-scroll-to="team" class="overlay-menu__link">Команда</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#" class="overlay-menu__link">Меню</a>
+          <a href="#" data-scroll-to="products-menu" class="overlay-menu__link">Меню</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#reviews" class="overlay-menu__link">Отзывы</a>
+          <a href="#" data-scroll-to="reviews" class="overlay-menu__link">Отзывы</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#" class="overlay-menu__link">Как мы работаем</a>
+          <a href="#" data-scroll-to="player" class="overlay-menu__link">Как мы работаем</a>
         </li>
         <li class="overlay-menu__item">
-          <a href="#contacts" class="overlay-menu__link">Контакты</a>
+          <a href="#" data-scroll-to="contacts" class="overlay-menu__link">Контакты</a>
         </li>
       </ul>
     </div>
@@ -865,18 +872,20 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="./scripts/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+  <script src="./scripts/jquery.bxslider.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
   <script src="./scripts/overlay-menu.js"></script>
   <script src="./scripts/composition-pop-up.js"></script>
   <script src="./scripts/vertical-accordion.js"></script>
   <script src="./scripts/slider-reviews.js"></script>
+  <script src="./scripts/ops.js"></script> 
   <script src="./scripts/slider-composition.js"></script>
   <script src="./scripts/modal.js"></script>
   <script src="./scripts/menu-accordion.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./scripts/map.js"></script>
-  <script src="./scripts/ops.js"></script> 
   <script src="./scripts/player-html.js"></script> 
 
 </body>
