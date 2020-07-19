@@ -99,22 +99,8 @@ video.ready(function() {
 
     setInitialVolume();
 
-    const formatTime = timeSec => {
-    const roundTime = Math.round(timeSec);
-
-    const minutes = addZero(Math.floor(roundTime / 60));
-    const seconds = addZero(roundTime % 60);
-
-    function addZero(num) {
-        return num < 10 ? `0${num}` : num;
-    }
-
-    return `${minutes}:${seconds}`;
-}
     let interval;
     const durationSec = video[0].duration;
-
-    $('.player__duration-estimate').text(formatTime(durationSec));
 
     if (typeof interval != 'undefined') {
         clearInterval(interval);
@@ -123,7 +109,7 @@ video.ready(function() {
     interval = setInterval(() => {
         const completedSec = video[0].currentTime;
         const completedPercent = (completedSec / durationSec) * 100;
-
+    
         $('.player__playback-button').css({
             left: `${completedPercent}%`
         });
@@ -131,15 +117,18 @@ video.ready(function() {
             width: `${completedPercent}%`
         });
         $('.player__duration-completed').text(formatTime(completedSec));
-
+    
         if (completedSec == durationSec) {
             video[0].load();
             playerContainer.removeClass('active');
             playerContainer.removeClass('paused');
         }
-
+    
     }, 1000); 
 });
+
+
+
 
 $('document').ready(function() {
     const playerSize = $('.player-section__container');
